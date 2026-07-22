@@ -1,2 +1,0 @@
-# MyDataAnalystPortfolio
-Designed portfolio website
