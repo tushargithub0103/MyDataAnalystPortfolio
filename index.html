@@ -1378,14 +1378,18 @@
         }
 
         function downloadResume(e) {
-            e.preventDefault();
-            showToast("Downloading Tushar More's Data Analyst Resume...");
+            if (e) e.preventDefault();
+            showToast("Opening Tushar More's Data Analyst Resume...");
+            
             setTimeout(() => {
-                const a = document.createElement('a');
-                a.href = '#';
-                a.download = 'Tushar_More_Data_Analyst_Resume.pdf';
-                showToast("Resume download link triggered!");
-            }, 1000);
+                // Direct view/download link for Google Drive
+                const driveUrl = 'https://drive.google.com/file/d/1LQzeZeenscaKFG0rm2oVbRsSRc5iS3gR/view?usp=sharing';
+                
+                // Opens the resume in a new browser tab for the recruiter
+                window.open(driveUrl, '_blank');
+                
+                showToast("Resume opened in a new tab!");
+            }, 800);
         }
 
         // 6. Contact Form Submission
