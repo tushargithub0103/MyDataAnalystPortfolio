@@ -49,7 +49,7 @@
                         'float-delayed': 'float 6s ease-in-out 3s infinite',
                         'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
                         'spin-slow': 'spin 12s linear infinite',
-                        'marquee': 'marquee 25s linear infinite',
+                        'marquee': 'marquee 6s linear infinite',
                     },
                     keyframes: {
                         float: {
@@ -192,20 +192,15 @@
     <header class="fixed top-0 left-0 w-full z-50 px-4 sm:px-8 py-4 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto glass-panel rounded-full px-6 py-3 flex items-center justify-between border border-white/10 shadow-2xl">
             <!-- Logo -->
-                <a href="#hero" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-blue-500 flex items-center justify-center font-heading font-bold text-white text-lg shadow-glow group-hover:scale-105 transition-transform overflow-hidden p-[1px]">
-                        <img 
-                            src="TusharMoreImage.png" 
-                            alt="Tushar More" 
-                            class="w-full h-full object-cover rounded-[11px]"
-                            onerror="this.onerror=null; this.src='profile.png';"
-                        />
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-heading font-bold text-white tracking-wide text-base group-hover:text-purple-400 transition-colors">Tushar More</span>
-                        <span class="text-[10px] text-purple-400 font-mono tracking-wider uppercase">Data Analyst</span>
-                    </div>
-                </a>
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-blue-500 flex items-center justify-center shadow-glow group-hover:scale-105 transition-transform overflow-hidden p-[1px]">
+                    <img src="tusharmoreimage.png" alt="Tushar More" class="w-full h-full object-cover rounded-[11px]" onerror="this.onerror=null; this.src='profile.png';" />
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-white tracking-wide text-base group-hover:text-purple-400 transition-colors">Tushar More</span>
+                    <span class="text-[10px] text-purple-400 font-mono tracking-wider uppercase">Data Analyst</span>
+                </div>
+            </a>
 
             <!-- Desktop Nav Links -->
             <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-300">
@@ -333,9 +328,9 @@
                 <!-- Right Column Portrait & Floating Analytics Cards -->
                 <div class="lg:col-span-5 relative flex justify-center items-center">
                     
-                    <div class="absolute w-72 h-72 sm:w-80 sm:h-80 rounded-full bg-gradient-to-tr from-purple-600 to-cyan-500 opacity-30 blur-2xl animate-spin-slow"></div>
+                    <div class="absolute w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-purple-600 to-cyan-500 opacity-30 blur-2xl animate-spin-slow"></div>
 
-                    <div class="relative z-10 w-72 h-80 sm:w-80 sm:h-96 rounded-3xl glass-panel p-3 border border-purple-500/30 shadow-2xl overflow-hidden group">
+                    <div class="relative z-10 w-80 h-[410px] sm:w-[380px] sm:h-[470px] rounded-3xl glass-panel p-3 border border-purple-500/30 shadow-2xl overflow-hidden group">
                         <div class="w-full h-full rounded-2xl bg-gradient-to-b from-slate-800 to-slate-950 flex flex-col justify-end items-center relative overflow-hidden">
                             
                             <div class="absolute inset-0 flex items-center justify-center">
@@ -344,11 +339,11 @@
                                 </svg>
                             </div>
 
-                            <div class="z-10 flex flex-col items-center mb-6 text-center px-4">
-                                <div class="w-32 h-32 rounded-full border-2 border-purple-400 p-1 mb-3 shadow-glow bg-slate-900 flex items-center justify-center overflow-hidden">
-                                    <img src="TusharMoreImage.png" alt="Tushar More" class="w-full h-full object-cover rounded-full" onerror="this.onerror=null; this.src='profile.png';" />
+                            <div class="z-10 flex flex-col items-center mb-5 text-center px-4">
+                                <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-full border-2 border-purple-400 p-1 mb-3 shadow-glow bg-slate-900 flex items-center justify-center overflow-hidden">
+                                    <img src="tusharmoreimage.png" alt="Tushar More" class="w-full h-full object-cover rounded-full" onerror="this.onerror=null; this.src='profile.png';" />
                                 </div>
-                                <h3 class="font-heading font-bold text-white text-lg">Tushar More</h3>
+                                <h3 class="font-heading font-bold text-white text-xl">Tushar More</h3>
                                 <p class="text-xs text-purple-300 font-mono">Wipro Ltd | CS Graduate</p>
                                 <span class="mt-2 text-[11px] px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
                                     <i class="fa-solid fa-shield-halved mr-1"></i> Data Storyteller
@@ -357,40 +352,31 @@
                         </div>
                     </div>
 
-                    <!-- FLOATING CARD 1: SQL Query snippet -->
-                    <div class="absolute -top-6 -left-6 z-20 glass-panel p-3.5 rounded-2xl border border-purple-500/30 shadow-glow animate-float max-w-[210px] hidden sm:block">
-                        <div class="flex items-center gap-2 mb-1">
-                            <i class="fa-solid fa-database text-purple-400 text-xs"></i>
-                            <span class="text-[11px] font-mono font-bold text-purple-200">MySQL Analysis</span>
-                        </div>
-                        <p class="font-mono text-[10px] text-gray-300 leading-tight">
-                            <span class="text-purple-400">WITH</span> segment <span class="text-purple-400">AS</span> (<br/>
-                            &nbsp;&nbsp;<span class="text-purple-400">SELECT</span> customer_id,<br/>
-                            &nbsp;&nbsp;<span class="text-blue-400">AVG</span>(spend) <span class="text-purple-400">OVER</span>()...
-                        </p>
+                    <!-- INDIVIDUAL FLOATING LOGO BADGES (Positioned closer to photo) -->
+                    
+                    <!-- 1. SQL Logo -->
+                    <div class="absolute top-2 left-2 sm:left-4 z-20 glass-panel p-2.5 rounded-xl border border-purple-500/30 shadow-glow animate-float flex items-center justify-center hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-database text-purple-400 text-lg" title="SQL"></i>
                     </div>
 
-                    <!-- FLOATING CARD 2: Power BI KPI Badge -->
-                    <div class="absolute top-1/3 -right-8 z-20 glass-panel p-3.5 rounded-2xl border border-cyan-500/30 shadow-glowCyan animate-float-delayed max-w-[190px] hidden sm:block">
-                        <div class="flex items-center justify-between gap-2 mb-1">
-                            <span class="text-[11px] text-gray-400 font-medium">SLA Compliance</span>
-                            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300">100%</span>
-                        </div>
-                        <div class="text-lg font-heading font-bold text-white">Excel MIS</div>
-                        <div class="text-[10px] text-cyan-400 font-mono"><i class="fa-solid fa-chart-line mr-1"></i>Power BI & DAX</div>
+                    <!-- 2. Python Logo -->
+                    <div class="absolute top-4 right-2 sm:right-4 z-20 glass-panel p-2.5 rounded-xl border border-blue-500/30 shadow-glowBlue animate-float-delayed flex items-center justify-center hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-python text-blue-400 text-xl" title="Python"></i>
                     </div>
 
-                    <!-- FLOATING CARD 3: Python Notebook Status -->
-                    <div class="absolute -bottom-6 -left-4 z-20 glass-panel p-3.5 rounded-2xl border border-blue-500/30 shadow-glowBlue animate-float max-w-[220px]">
-                        <div class="flex items-center gap-2">
-                            <div class="w-7 h-7 rounded-lg bg-blue-600/30 flex items-center justify-center text-blue-400 text-xs">
-                                <i class="fa-brands fa-python"></i>
-                            </div>
-                            <div>
-                                <div class="text-[11px] font-bold text-white">Pandas & Scikit-learn</div>
-                                <div class="text-[10px] text-gray-400 font-mono">3,900+ Records Cleaned</div>
-                            </div>
-                        </div>
+                    <!-- 3. Power BI Logo -->
+                    <div class="absolute top-1/2 -translate-y-1/2 right-1 sm:right-2 z-20 glass-panel p-2.5 rounded-xl border border-amber-500/30 shadow-glow flex items-center justify-center animate-float hover:scale-110 transition-transform" style="animation-delay: 1.5s;">
+                        <i class="fa-solid fa-chart-simple text-amber-400 text-lg" title="Power BI"></i>
+                    </div>
+
+                    <!-- 4. Excel Logo -->
+                    <div class="absolute bottom-12 left-1 sm:left-2 z-20 glass-panel p-2.5 rounded-xl border border-emerald-500/30 shadow-glow flex items-center justify-center animate-float-delayed hover:scale-110 transition-transform" style="animation-delay: 2.5s;">
+                        <i class="fa-solid fa-file-excel text-emerald-400 text-lg" title="Excel"></i>
+                    </div>
+
+                    <!-- 5. Chart Logo -->
+                    <div class="absolute bottom-2 right-10 sm:right-14 z-20 glass-panel p-2.5 rounded-xl border border-cyan-500/30 shadow-glowCyan animate-float flex items-center justify-center hover:scale-110 transition-transform" style="animation-delay: 4s;">
+                        <i class="fa-solid fa-chart-line text-cyan-400 text-lg" title="Analytics Chart"></i>
                     </div>
 
                 </div>
@@ -1136,32 +1122,27 @@
     </section>
 
     <!-- FOOTER -->
-        <footer class="border-t border-white/10 py-12 relative z-10 bg-slate-950">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-purple-600 to-blue-500 flex items-center justify-center p-[1px] shadow-glow overflow-hidden">
-                        <img 
-                            src="TusharMoreImage.png" 
-                            alt="Tushar More" 
-                            class="w-full h-full object-cover rounded-[7px]"
-                            onerror="this.onerror=null; this.src='profile.png';"
-                        />
-                    </div>
-                    <div>
-                        <span class="font-heading font-bold text-white text-sm">Tushar More</span>
-                        <p class="text-xs text-gray-400">Data Analyst & BI Specialist</p>
-                    </div>
+    <footer class="border-t border-white/10 py-12 relative z-10 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-blue-500 flex items-center justify-center shadow-glow overflow-hidden p-[1px]">
+                    <img src="tusharmoreimage.png" alt="Tushar More" class="w-full h-full object-cover rounded-[11px]" onerror="this.onerror=null; this.src='profile.png';" />
                 </div>
-
-                <div class="text-xs text-gray-400 text-center">
-                    &copy; 2026 Tushar More. Crafted for high-impact analytics decisions.
+                <div class="flex flex-col text-left">
+                    <span class="font-heading font-bold text-white text-base tracking-wide">Tushar More</span>
+                    <p class="text-xs text-purple-400 font-mono">Data Analyst & BI Specialist</p>
                 </div>
-
-                <button onclick="scrollToTop()" class="px-4 py-2 rounded-xl glass-panel border border-white/10 text-xs text-gray-300 hover:text-white hover:border-purple-400 transition-all flex items-center gap-2 cursor-pointer">
-                    <span>Back to Top</span> <i class="fa-solid fa-arrow-up"></i>
-                </button>
             </div>
-        </footer>
+
+            <div class="text-xs text-gray-400 text-center">
+                &copy; 2026 Tushar More. Crafted for high-impact analytics decisions.
+            </div>
+
+            <button onclick="scrollToTop()" class="px-4 py-2 rounded-xl glass-panel border border-white/10 text-xs text-gray-300 hover:text-white hover:border-purple-400 transition-all flex items-center gap-2 cursor-pointer">
+                <span>Back to Top</span> <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
 
     <!-- INTERACTIVE JAVASCRIPT LOGIC -->
     <script>
