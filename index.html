@@ -109,6 +109,40 @@
         box-shadow: 0 12px 30px -10px rgba(139, 92, 246, 0.3);
       }
 
+      /* Gold featured badge with a continuous light reflection. */
+      .featured-badge {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        color: #fff3c4;
+        background: linear-gradient(110deg, #7a4b09, #d99b1e 45%, #8a570b);
+        border: 1px solid rgba(255, 218, 123, 0.72);
+        box-shadow: 0 0 8px rgba(245, 181, 47, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        text-shadow: 0 1px 2px rgba(71, 37, 0, 0.7);
+      }
+
+      .featured-badge::after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: -70%;
+        left: -65%;
+        width: 34%;
+        height: 240%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+        transform: rotate(24deg);
+        animation: featuredShine 2.8s ease-in-out infinite;
+      }
+
+      @keyframes featuredShine {
+        0%, 24% { left: -65%; }
+        55%, 100% { left: 135%; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .featured-badge::after { animation: none; }
+      }
+
       /* Gradient Text */
       .text-gradient {
         background: linear-gradient(
@@ -1209,7 +1243,7 @@
             </div>
             <div class="p-8 md:w-1/2 flex flex-col justify-center">
               <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs font-mono px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">FEATURED</span>
+                <span class="featured-badge text-xs font-mono px-3 py-1 rounded-full"><span class="relative z-10">FEATURED</span></span>
                 <div class="flex items-center gap-2 text-purple-400 text-sm">
                   <i class="fa-solid fa-taxi"></i> Power BI + SQL + Excel
                 </div>
