@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tushar More | Data Analyst</title>
-    <link rel="icon" href="TusharMoreImage.png" />
+    <link id="site-favicon" rel="icon" type="image/png" href="TusharMoreImage.png" />
     <!-- Meta SEO Tags -->
     <meta
       name="description"
@@ -2368,6 +2368,21 @@
       const canvas = document.getElementById("particleCanvas");
       const ctx = canvas.getContext("2d");
       let particles = [];
+
+      // Build a transparent, circular tab icon from Tushar's actual photo.
+      const faviconLink = document.getElementById("site-favicon");
+      const faviconPhoto = new Image();
+      faviconPhoto.src = "TusharMoreImage.png";
+      faviconPhoto.onload = () => {
+        const faviconCanvas = document.createElement("canvas");
+        faviconCanvas.width = faviconCanvas.height = 64;
+        const faviconContext = faviconCanvas.getContext("2d");
+        faviconContext.beginPath();
+        faviconContext.arc(32, 32, 30, 0, Math.PI * 2);
+        faviconContext.clip();
+        faviconContext.drawImage(faviconPhoto, 0, 0, 64, 64);
+        faviconLink.href = faviconCanvas.toDataURL("image/png");
+      };
 
       // Small, low-key cursor orbit for desktop pointers.
       const cursorHalo = document.getElementById("cursorHalo");
