@@ -181,23 +181,60 @@
         z-index: 0;
       }
 
-      .cursor-glow {
+      /* Minimal data-orbit cursor for mouse/trackpad devices. */
+      #cursorHalo {
         position: fixed;
-        width: 400px;
-        height: 400px;
-        background: radial-gradient(
-          circle,
-          rgba(139, 92, 246, 0.12) 0%,
-          rgba(59, 130, 246, 0.05) 50%,
-          rgba(0, 0, 0, 0) 70%
-        );
-        border-radius: 50%;
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 25px;
         pointer-events: none;
-        transform: translate(-50%, -50%);
+        z-index: 1000;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.65);
+        transition: opacity 0.18s ease, transform 0.16s ease-out;
+      }
+
+      #cursorHalo.is-visible {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      #cursorHalo .cursor-chart {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4px;
+        height: 4px;
+        margin: -2px;
+        border-radius: 50%;
         z-index: 1;
-        transition:
-          width 0.3s,
-          height 0.3s;
+        background: #d8fbff;
+        box-shadow: 0 0 7px rgba(34, 211, 238, 0.55);
+        font-size: 0;
+        animation: cursorDotPulse 1.8s ease-in-out infinite;
+      }
+
+      #cursorHalo::after {
+        content: "";
+        position: absolute;
+        inset: 1px;
+        border: 1px solid rgba(34, 211, 238, 0.55);
+        border-left-color: rgba(168, 85, 247, 0.8);
+        border-radius: 50%;
+        animation: cursorOrbit 2.6s linear infinite;
+      }
+
+      @keyframes cursorOrbit {
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes cursorDotPulse {
+        50% { transform: scale(1.35); opacity: 0.78; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #cursorHalo::after, #cursorHalo .cursor-chart { animation: none; }
       }
 
       .bg-grid-pattern {
@@ -266,9 +303,8 @@
   <body
     class="relative bg-darkBg text-gray-200 antialiased selection:bg-purple-600 selection:text-white"
   >
-    <!-- Mouse Glow Follower -->
-    <div id="cursorGlow" class="cursor-glow hidden md:block"></div>
-
+    <!-- Small animated glow that follows the regular desktop cursor -->
+    <div id="cursorHalo" aria-hidden="true"><i class="cursor-chart"></i></div>
     <!-- Particle Canvas Background -->
     <canvas id="particleCanvas"></canvas>
 
@@ -291,12 +327,12 @@
         <!-- Logo -->
         <a href="#hero" class="flex items-center gap-3 group">
           <div
-            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-blue-500 flex items-center justify-center shadow-glow group-hover:scale-105 transition-transform overflow-hidden p-[1px]"
+            class="w-9 h-9 rounded-full bg-slate-900 border-2 border-purple-300/80 ring-1 ring-white/10 flex items-center justify-center shadow-[0_0_10px_rgba(139,92,246,0.16)] group-hover:scale-105 group-hover:border-cyan-300 transition-transform overflow-hidden p-[2px]"
           >
             <img
               src="TusharMoreImage.png"
               alt="Tushar More"
-              class="w-full h-full object-cover rounded-[11px]"
+              class="w-full h-full object-cover rounded-full"
               onerror="
                 this.onerror = null;
                 this.src = 'tusharmoreimage.png';
@@ -838,7 +874,7 @@
                 </div>
                 <div>
                   <h3 class="font-heading text-xl font-bold text-white">
-                    The Story So Far
+                    My Journey with Data
                   </h3>
                   <p class="text-xs text-gray-400">
                     Computer Science Engineering Graduate & Analyst
@@ -2288,12 +2324,12 @@
         <!-- Centered Brand Info -->
         <div class="flex items-center gap-3">
           <div
-            class="w-10 h-10 rounded-lg bg-gradient-to-tr from-purple-600 to-blue-500 flex items-center justify-center p-[1px] shadow-glow overflow-hidden"
+            class="w-8 h-8 rounded-full bg-slate-900 border border-purple-400/70 flex items-center justify-center p-[2px] overflow-hidden"
           >
             <img
               src="TusharMoreImage.png"
               alt="Tushar More"
-              class="w-full h-full object-cover rounded-[7px]"
+              class="w-full h-full object-cover rounded-full"
               onerror="
                 this.onerror = null;
                 this.src = 'tusharmoreimage.png';
@@ -2333,6 +2369,16 @@
       const ctx = canvas.getContext("2d");
       let particles = [];
 
+      // Small, low-key cursor orbit for desktop pointers.
+      const cursorHalo = document.getElementById("cursorHalo");
+      if (window.matchMedia("(pointer: fine)").matches) {
+        window.addEventListener("mousemove", (event) => {
+          cursorHalo.style.left = `${event.clientX}px`;
+          cursorHalo.style.top = `${event.clientY}px`;
+          cursorHalo.classList.add("is-visible");
+        });
+      }
+
       function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -2344,10 +2390,10 @@
         constructor() {
           this.x = Math.random() * canvas.width;
           this.y = Math.random() * canvas.height;
-          this.size = Math.random() * 2 + 0.5;
+          this.size = Math.random() * 1.2 + 0.4;
           this.speedX = (Math.random() - 0.5) * 0.4;
           this.speedY = (Math.random() - 0.5) * 0.4;
-          this.opacity = Math.random() * 0.5 + 0.2;
+          this.opacity = Math.random() * 0.22 + 0.08;
         }
         update() {
           this.x += this.speedX;
@@ -2385,14 +2431,7 @@
       }
       animateParticles();
 
-      // 2. Mouse Cursor Glow
-      const cursorGlow = document.getElementById("cursorGlow");
-      window.addEventListener("mousemove", (e) => {
-        cursorGlow.style.left = `${e.clientX}px`;
-        cursorGlow.style.top = `${e.clientY}px`;
-      });
-
-      // 3. Counter Animation (Runs immediately once when website opens)
+      // 2. Counter Animation (Runs immediately once when website opens)
       const counters = document.querySelectorAll(".counter");
       let animated = false;
 
