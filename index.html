@@ -2968,15 +2968,9 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const visitRef = doc(db, "portfolio", "visits");
 
-const lastVisit = localStorage.getItem("portfolio_last_visit");
-const now = Date.now();
-
-if (!lastVisit || now - Number(lastVisit) > 86400000) {
-  await updateDoc(visitRef, {
-    count: increment(1)
-  });
-  localStorage.setItem("portfolio_last_visit", now);
-}
+await updateDoc(visitRef, {
+  count: increment(1)
+});
 
 const snap = await getDoc(visitRef);
 
