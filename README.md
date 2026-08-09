@@ -4,7 +4,7 @@ A single-page, dark-themed portfolio website built to showcase my journey as a *
 
 Live focus: **fast recruiter comprehension**. The site is built around getting a hiring manager from "who is this" to "let's talk" in under 60 seconds, with a dedicated Recruiter Quick View, proof-point stats, and one-click resume/contact actions.
 
-![Portfolio Preview](./screenshot.png)
+![Portfolio Preview](./Portfolio.gif)
 
 ---
 
