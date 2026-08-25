@@ -899,7 +899,7 @@
   </div>
 
   <!-- ABOUT SECTION -->
-  <section id="about" class="py-24 relative z-10">
+  <section id="about" class="py-12 sm:py-24 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-2">
@@ -1034,9 +1034,9 @@
   </section>
 
   <!-- PROJECTS SECTION -->
-  <section id="projects" class="py-24 relative z-10">
+  <section id="projects" class="py-12 sm:py-24 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
         <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-2">
           Selected Case Studies
         </h2>
@@ -1049,32 +1049,34 @@
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-8">
+      <div class="grid lg:grid-cols-2 gap-6 sm:gap-8">
         <!-- Featured Project: OLA Ride Analytics Dashboard -->
         <div data-tech="powerbi sql excel"
           class="project-card glass-panel rounded-3xl border border-white/10 overflow-hidden glass-panel-hover lg:col-span-2 flex flex-col lg:flex-row transition-all duration-300">
           <div
-            class="w-full lg:w-5/12 bg-slate-950/80 p-6 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10">
+            class="w-full lg:w-5/12 bg-slate-950/80 p-4 sm:p-6 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10">
             <div>
-              <div class="flex items-center gap-3 mb-4">
-                <span class="featured-badge text-xs font-mono px-3 py-1 rounded-full">
-                  <span class="relative z-10">FEATURED CASE STUDY</span>
+              <div class="flex items-center justify-between sm:justify-start gap-3 mb-3 sm:mb-4">
+                <span
+                  class="featured-badge text-[11px] sm:text-xs font-mono px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full">
+                  <span class="relative z-10">FEATURED PROJECT</span>
                 </span>
-                <div class="flex items-center gap-2 text-purple-400 text-xs font-mono">
+                <div class="flex items-center gap-1.5 text-purple-400 text-[11px] sm:text-xs font-mono">
                   <i class="fa-solid fa-taxi"></i> Power BI + SQL + Excel
                 </div>
               </div>
 
-              <div class="rounded-2xl overflow-hidden border border-white/10 mb-4 bg-slate-900">
+              <div class="rounded-2xl overflow-hidden border border-white/10 mb-3 sm:mb-4 bg-slate-900">
                 <img src="page1.gif" alt="OLA Ride Analytics Dashboard preview"
-                  class="w-full h-auto aspect-video object-contain" />
+                  class="w-full h-auto aspect-video object-contain max-h-48 sm:max-h-none mx-auto" />
               </div>
 
               <!-- Analytical Journey Pipeline Stepper -->
-              <div class="p-3 rounded-2xl bg-slate-900/90 border border-white/5 space-y-2">
-                <p class="text-[11px] font-mono text-purple-400 uppercase tracking-wider">Analytical Journey Pipeline
+              <div class="p-2.5 sm:p-3 rounded-2xl bg-slate-900/90 border border-white/5 space-y-1.5 sm:space-y-2">
+                <p class="text-[10px] sm:text-[11px] font-mono text-purple-400 uppercase tracking-wider">Analytical
+                  Journey Pipeline
                 </p>
-                <div class="grid grid-cols-4 gap-1.5 text-center text-[10px] font-mono">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 text-center text-[10px] font-mono">
                   <div class="p-1.5 rounded bg-slate-950 text-gray-300 border border-white/5">1. Raw Data</div>
                   <div class="p-1.5 rounded bg-slate-950 text-gray-300 border border-white/5">2. SQL Query</div>
                   <div class="p-1.5 rounded bg-slate-950 text-gray-300 border border-white/5">3. DAX KPIs</div>
@@ -1084,7 +1086,7 @@
               </div>
             </div>
 
-            <div class="pt-4 mt-4 border-t border-white/10 flex flex-col gap-2">
+            <div class="pt-3 sm:pt-4 mt-3 sm:mt-4 border-t border-white/10 flex flex-col gap-2">
               <a href="https://github.com/tushargithub0103/OLA-Analytics-Project" target="_blank"
                 rel="noopener noreferrer"
                 class="w-full text-center inline-flex items-center justify-center gap-2 text-xs font-semibold text-white bg-purple-600 hover:bg-purple-500 px-4 py-2.5 rounded-xl transition-all shadow-glow">
@@ -1095,9 +1097,9 @@
             </div>
           </div>
 
-          <div class="p-6 sm:p-8 lg:w-7/12 flex flex-col justify-between">
+          <div class="p-4 sm:p-8 lg:w-7/12 flex flex-col justify-between">
             <div>
-              <h3 class="font-heading text-2xl font-bold text-white mb-2">
+              <h3 class="font-heading text-xl sm:text-2xl font-bold text-white mb-2">
                 OLA Ride Analytics Dashboard
               </h3>
 
@@ -1116,46 +1118,58 @@
                 </p>
               </div>
 
-              <!-- Quantifiable Proof Badges -->
-              <div class="flex flex-wrap gap-2 mb-5">
+              <!-- Quantifiable Proof Badges (Responsive Grid on Mobile) -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-5">
                 <span
-                  class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-purple-300 border border-purple-500/20">100K+
+                  class="text-[11px] sm:text-xs font-mono px-2 sm:px-2.5 py-1 rounded-md bg-slate-900 text-purple-300 border border-purple-500/20 text-center">100K+
                   Booking Records</span>
                 <span
-                  class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-cyan-300 border border-cyan-500/20">5
-                  Interactive BI Pages</span>
+                  class="text-[11px] sm:text-xs font-mono px-2 sm:px-2.5 py-1 rounded-md bg-slate-900 text-cyan-300 border border-cyan-500/20 text-center">5
+                  Interactive Pages</span>
                 <span
-                  class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-amber-300 border border-amber-500/20">10
-                  Complex SQL Queries</span>
+                  class="text-[11px] sm:text-xs font-mono px-2 sm:px-2.5 py-1 rounded-md bg-slate-900 text-amber-300 border border-amber-500/20 text-center">10
+                  Complex Queries</span>
                 <span
-                  class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-emerald-300 border border-emerald-500/20">₹34M+
-                  Revenue Tracked</span>
+                  class="text-[11px] sm:text-xs font-mono px-2 sm:px-2.5 py-1 rounded-md bg-slate-900 text-emerald-300 border border-emerald-500/20 text-center">₹34M+
+                  Revenue</span>
                 <span
-                  class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-rose-300 border border-rose-500/20">28.08%
-                  Cancellation Rate</span>
+                  class="text-[11px] sm:text-xs font-mono px-2 sm:px-2.5 py-1 rounded-md bg-slate-900 text-rose-300 border border-rose-500/20 col-span-2 sm:col-span-1 text-center">28.08%
+                  Cancellation</span>
               </div>
 
               <!-- Structured Business Recommendation Framework -->
-              <div class="p-4 rounded-2xl bg-slate-900/90 border border-white/10 space-y-2.5 mb-4 text-xs">
-                <p
-                  class="font-mono text-purple-400 uppercase tracking-wider text-[11px] font-semibold flex items-center gap-1.5">
-                  <i class="fa-solid fa-lightbulb text-amber-400"></i> Business Recommendation Breakdown
-                </p>
-                <div class="grid sm:grid-cols-3 gap-2 pt-1">
-                  <div class="p-2.5 rounded-xl bg-slate-950/80 border border-white/5">
-                    <span class="text-[10px] font-mono text-rose-400 block uppercase">1. Finding</span>
-                    <span class="text-gray-300">Driver cancellations spike during peak evening commute hours due to
-                      distance/traffic.</span>
+              <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-900/90 border border-white/10 space-y-2 mb-4 text-xs">
+                <div class="flex items-center justify-between mb-1">
+                  <span
+                    class="font-mono text-purple-400 uppercase tracking-wider text-[11px] font-semibold flex items-center gap-1.5">
+                    <i class="fa-solid fa-lightbulb text-amber-400"></i> Recommendation Breakdown
+                  </span>
+                  <!-- Mobile Tab Buttons -->
+                  <div class="flex sm:hidden gap-1" id="olaRecTabs">
+                    <button type="button" onclick="switchOlaRecTab(0)"
+                      class="ola-rec-btn active px-2 py-0.5 rounded bg-purple-600 text-white font-mono text-[10px]">1</button>
+                    <button type="button" onclick="switchOlaRecTab(1)"
+                      class="ola-rec-btn px-2 py-0.5 rounded bg-slate-800 text-gray-400 font-mono text-[10px]">2</button>
+                    <button type="button" onclick="switchOlaRecTab(2)"
+                      class="ola-rec-btn px-2 py-0.5 rounded bg-slate-800 text-gray-400 font-mono text-[10px]">3</button>
                   </div>
-                  <div class="p-2.5 rounded-xl bg-slate-950/80 border border-white/5">
-                    <span class="text-[10px] font-mono text-amber-400 block uppercase">2. Why It Matters</span>
-                    <span class="text-gray-300">Driver cancellations cause lost customer trust, lower completion rates,
-                      and revenue leakage.</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
+                  <div class="ola-rec-card p-2.5 rounded-xl bg-slate-950/80 border border-white/5 block">
+                    <span class="text-[10px] font-mono text-rose-400 block uppercase font-semibold">1. Finding</span>
+                    <span class="text-gray-300 text-[11px] sm:text-xs leading-relaxed">Driver cancellations spike during
+                      peak evening commute hours due to distance/traffic.</span>
                   </div>
-                  <div class="p-2.5 rounded-xl bg-slate-950/80 border border-white/5">
-                    <span class="text-[10px] font-mono text-emerald-400 block uppercase">3. Action</span>
-                    <span class="text-gray-300">Implement prime-time driver surge bonus multipliers and destination
-                      distance disclosure thresholds.</span>
+                  <div class="ola-rec-card p-2.5 rounded-xl bg-slate-950/80 border border-white/5 hidden sm:block">
+                    <span class="text-[10px] font-mono text-amber-400 block uppercase font-semibold">2. Why It
+                      Matters</span>
+                    <span class="text-gray-300 text-[11px] sm:text-xs leading-relaxed">Driver cancellations cause lost
+                      customer trust, lower completion rates, and revenue leakage.</span>
+                  </div>
+                  <div class="ola-rec-card p-2.5 rounded-xl bg-slate-950/80 border border-white/5 hidden sm:block">
+                    <span class="text-[10px] font-mono text-emerald-400 block uppercase font-semibold">3. Action</span>
+                    <span class="text-gray-300 text-[11px] sm:text-xs leading-relaxed">Implement prime-time driver surge
+                      bonus multipliers and distance disclosure thresholds.</span>
                   </div>
                 </div>
               </div>
@@ -1165,7 +1179,7 @@
                 <button type="button" onclick="toggleCodeDrawer('olaSqlDrawer')"
                   class="inline-flex items-center gap-2 text-xs font-mono text-purple-300 border border-purple-500/30 hover:border-purple-400 bg-purple-500/10 hover:bg-purple-500/20 px-3.5 py-2 rounded-xl transition-all">
                   <i class="fa-solid fa-code text-purple-400"></i>
-                  <span>[ &lt;/&gt; View Sample SQL Query ]</span>
+                  <span>View Sample SQL Query</span>
                   <i class="fa-solid fa-chevron-down text-[10px] opacity-70 ml-1"></i>
                 </button>
 
@@ -1179,7 +1193,7 @@
                     <span class="text-[10px] text-gray-400">MySQL 8.0</span>
                   </div>
                   <pre
-                    class="text-gray-200 overflow-x-auto text-[11px] leading-relaxed p-2 rounded bg-slate-900 border border-white/5 font-mono"><code>WITH CancellationSummary AS (
+                    class="text-gray-200 overflow-x-auto max-h-56 text-[11px] leading-relaxed p-2 rounded bg-slate-900 border border-white/5 font-mono"><code>WITH CancellationSummary AS (
     SELECT 
         Booking_ID,
         Vehicle_Type,
@@ -1223,29 +1237,30 @@ ORDER BY Lost_Revenue_INR DESC;</code></pre>
             <img src="Project2.png" alt="Customer Shopping Behavior Dashboard"
               class="w-full aspect-video object-cover" />
           </div>
-          <div class="p-6 sm:p-8">
+          <div class="p-4 sm:p-8">
             <div
-              class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/10 p-4 mb-4">
+              class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-4 border-t border-white/10 p-3 sm:p-4 mb-3 sm:mb-4">
               <span
                 class="text-xs font-mono px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">Feb
                 2026</span>
-              <div class="flex items-center gap-2 text-purple-400 text-sm font-mono">
+              <div class="flex items-center gap-2 text-purple-400 text-xs sm:text-sm font-mono">
                 <i class="fa-solid fa-chart-line"></i> Power BI + SQL + Python
               </div>
             </div>
 
-            <h3 class="font-heading text-2xl font-bold text-white mb-3 hover:text-purple-400 transition-colors">
+            <h3
+              class="font-heading text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3 hover:text-purple-400 transition-colors">
               Customer Shopping Behavior Analysis
             </h3>
 
-            <p class="text-gray-300 text-sm leading-relaxed mb-5">
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5">
               <strong class="text-white">Business question:</strong> which customer segments drive the most repeat
               revenue, and where should marketing focus retention spend? Analyzed <strong>3K+ retail customer
                 records</strong> using Python, SQL, MySQL, and Power BI to uncover purchasing patterns, loyalty trends,
               and revenue insights.
             </p>
 
-            <div class="space-y-2 mb-5">
+            <div class="space-y-1.5 sm:space-y-2 mb-4 sm:mb-5">
               <div class="flex items-start gap-2 text-xs text-gray-300">
                 <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
                 <span>Performed data cleaning, feature engineering, and exploratory data analysis (EDA) using Python
@@ -1264,11 +1279,11 @@ ORDER BY Lost_Revenue_INR DESC;</code></pre>
             </div>
 
             <!-- Technical Evidence Drawer Trigger -->
-            <div class="mb-5">
+            <div class="mb-4 sm:mb-5">
               <button type="button" onclick="toggleCodeDrawer('shoppingDaxDrawer')"
                 class="inline-flex items-center gap-2 text-xs font-mono text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 bg-cyan-500/10 hover:bg-cyan-500/20 px-3.5 py-2 rounded-xl transition-all">
                 <i class="fa-solid fa-calculator text-cyan-400"></i>
-                <span>[ &lt;/&gt; View Sample DAX KPI Measure ]</span>
+                <span>View Sample DAX KPI Measure</span>
                 <i class="fa-solid fa-chevron-down text-[10px] opacity-70 ml-1"></i>
               </button>
 
@@ -1282,7 +1297,7 @@ ORDER BY Lost_Revenue_INR DESC;</code></pre>
                   <span class="text-[10px] text-gray-400">DAX / Power BI Desktop</span>
                 </div>
                 <pre
-                  class="text-gray-200 overflow-x-auto text-[11px] leading-relaxed p-2 rounded bg-slate-900 border border-white/5 font-mono"><code>Repeat_Customer_Revenue_PCT = 
+                  class="text-gray-200 overflow-x-auto max-h-56 text-[11px] leading-relaxed p-2 rounded bg-slate-900 border border-white/5 font-mono"><code>Repeat_Customer_Revenue_PCT = 
 VAR TotalRevenue = SUM(CustomerShopping[Purchase Amount (USD)])
 VAR RepeatCustomerRevenue = 
     CALCULATE(
@@ -1300,7 +1315,7 @@ RETURN
               </div>
             </div>
 
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-1.5 sm:gap-2">
               <span
                 class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-purple-300 border border-purple-500/20">Python
                 Pandas</span>
@@ -1313,7 +1328,7 @@ RETURN
             </div>
           </div>
 
-          <div class="p-6 bg-slate-950/60 border-t border-white/10 flex items-center justify-between">
+          <div class="p-4 sm:p-6 bg-slate-950/60 border-t border-white/10 flex items-center justify-between">
             <a href="https://github.com/tushargithub0103/Customer-Shopping-Behavior-Analysis" target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 text-xs font-medium text-purple-300 border border-purple-500/30 hover:bg-purple-500/10 hover:border-purple-400 px-3 py-2 rounded-lg transition-all duration-300 shrink-0">
@@ -1339,29 +1354,30 @@ RETURN
             <img src="Project3.png" alt="Sentiment Analysis Web App" class="w-full aspect-video object-cover" />
           </div>
 
-          <div class="p-6 sm:p-8">
+          <div class="p-4 sm:p-8">
             <div
-              class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/10 p-4 mb-4">
+              class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-4 border-t border-white/10 p-3 sm:p-4 mb-3 sm:mb-4">
               <span
                 class="text-xs font-mono px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">May
                 2024</span>
-              <div class="flex items-center gap-2 text-blue-400 text-sm">
+              <div class="flex items-center gap-2 text-blue-400 text-xs sm:text-sm">
                 <i class="fa-solid fa-brain"></i> Python + NLP + Analytics
               </div>
             </div>
 
-            <h3 class="font-heading text-2xl font-bold text-white mb-3 hover:text-blue-400 transition-colors">
+            <h3
+              class="font-heading text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3 hover:text-blue-400 transition-colors">
               Sentiment Analysis Web Application
             </h3>
 
-            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
               <strong>Business question:</strong> how can a team turn scattered, unstructured customer feedback into
               something a reporting dashboard can actually track? Built a <strong>Sentiment Analysis web
                 application</strong> using Python, NLP, and Streamlit that classifies feedback from text, documents, and
               website URLs, and rolls it up into sentiment trends a BI dashboard can monitor over time.
             </p>
 
-            <div class="space-y-2 mb-6">
+            <div class="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
 
               <div class="flex items-start gap-2 text-xs text-gray-300">
                 <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
@@ -1383,7 +1399,7 @@ RETURN
 
             </div>
 
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-1.5 sm:gap-2">
               <span
                 class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-900 text-blue-300 border border-blue-500/20">Python</span>
               <span
@@ -1395,7 +1411,7 @@ RETURN
             </div>
           </div>
 
-          <div class="p-6 bg-slate-950/60 border-t border-white/10 flex items-center justify-between gap-3">
+          <div class="p-4 sm:p-6 bg-slate-950/60 border-t border-white/10 flex items-center justify-between gap-3">
             <a href="https://github.com/tushargithub0103/sentiment-analysis-web-app" target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 text-xs font-medium text-purple-300 border border-purple-500/30 hover:bg-purple-500/10 hover:border-purple-400 px-3 py-2 rounded-lg transition-all duration-300 shrink-0">
@@ -1484,7 +1500,7 @@ RETURN
   </section>
 
   <!-- EXPERIENCE SECTION -->
-  <section id="experience" class="py-24 relative z-10 bg-slate-950/50 border-y border-white/5">
+  <section id="experience" class="py-12 sm:py-24 relative z-10 bg-slate-950/50 border-y border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-2">
@@ -1795,7 +1811,7 @@ RETURN
   </section>
 
   <!-- SKILLS SECTION -->
-  <section id="skills" class="py-16 relative z-10 bg-slate-950/50 border-y border-white/5">
+  <section id="skills" class="py-10 sm:py-16 relative z-10 bg-slate-950/50 border-y border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-10">
         <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-2">
@@ -2040,7 +2056,7 @@ RETURN
 
 
   <!-- CERTIFICATES SECTION -->
-  <section id="certificates" class="py-24 relative z-10 bg-slate-950/50 border-y border-white/5">
+  <section id="certificates" class="py-12 sm:py-24 relative z-10 bg-slate-950/50 border-y border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-2">
@@ -2642,6 +2658,30 @@ RETURN
       if (drawer) {
         drawer.classList.toggle("hidden");
       }
+    }
+
+    // Mobile Business Recommendation Tab Switcher
+    function switchOlaRecTab(index) {
+      const cards = document.querySelectorAll(".ola-rec-card");
+      const btns = document.querySelectorAll(".ola-rec-btn");
+      cards.forEach((card, i) => {
+        if (i === index) {
+          card.classList.remove("hidden");
+          card.classList.add("block");
+        } else {
+          card.classList.remove("block");
+          card.classList.add("hidden");
+        }
+      });
+      btns.forEach((btn, i) => {
+        if (i === index) {
+          btn.classList.remove("bg-slate-800", "text-gray-400");
+          btn.classList.add("bg-purple-600", "text-white");
+        } else {
+          btn.classList.remove("bg-purple-600", "text-white");
+          btn.classList.add("bg-slate-800", "text-gray-400");
+        }
+      });
     }
 
     // 10. Interactive Project Skill Filters
