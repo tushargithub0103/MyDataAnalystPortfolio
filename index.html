@@ -604,7 +604,7 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section id="hero" class="relative min-h-screen pt-32 pb-20 flex items-center bg-grid-pattern overflow-hidden">
+  <section id="hero" class="relative min-h-screen pt-28 sm:pt-32 pb-8 sm:pb-20 flex items-center bg-grid-pattern overflow-hidden">
     <div
       class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none animate-pulse-glow">
     </div>
@@ -613,18 +613,18 @@
       style="animation-delay: 2s"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <!-- Left Column Text -->
-        <div class="lg:col-span-7 flex flex-col items-start gap-6">
+        <div class="lg:col-span-7 flex flex-col items-start gap-2.5 sm:gap-6">
           <!-- Status Badge -->
           <div
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-purple-500/30 text-xs font-mono text-purple-300">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-4 sm:py-2 rounded-full glass-panel border border-purple-500/30 text-[10px] sm:text-xs font-mono text-purple-300 mt-3 sm:mt-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
             <span>Open to Full-Time Data Analyst &amp; BI Roles</span>
           </div>
 
           <!-- Main Heading -->
-          <h1 class="font-poppins text-4xl sm:text-6xl xl:text-7xl font-bold leading-tight text-white">
+          <h1 class="font-poppins text-2xl sm:text-6xl xl:text-7xl font-bold leading-tight text-white tracking-tight">
             <span class="text-gradient">Data Analyst</span>
           </h1>
 
@@ -638,74 +638,78 @@
           </p>
 
           <!-- Paragraph -->
-          <p class="font-poppins font-bold text-gray-300">
+          <p class="font-poppins font-semibold text-gray-300 text-[11px] sm:text-base">
             Business Intelligence
             <span class="text-purple-500">&bull;</span> Power BI
             <span class="text-purple-500">&bull;</span> SQL
             <span class="text-purple-500">&bull;</span> Excel
             <span class="text-purple-500">&bull;</span> Python
           </p>
-          <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+          <p class="text-gray-400 text-[11px] sm:text-lg leading-relaxed max-w-2xl font-normal">
             I turn operational and business data into clear KPIs, automated
             reporting, and Power BI dashboards that support better decisions.
           </p>
 
-          <!-- CTA Buttons -->
-          <div class="flex flex-wrap items-center gap-4 pt-2">
+          <!-- CTA Buttons (Ultra-Compact Mobile 2-Row + Desktop Flex Layout) -->
+          <div class="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-4 pt-1 sm:pt-2">
+            <!-- Primary Action: View Best Case Study -->
             <a href="#projects"
-              class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-semibold text-sm shadow-glow transition-all duration-300 flex items-center gap-3 group">
+              class="w-full sm:w-auto px-4 sm:px-7 py-2 sm:py-3.5 rounded-lg sm:rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-semibold text-xs sm:text-sm shadow-glow transition-all duration-300 flex items-center justify-center gap-2 group">
               <span>View Best Case Study</span>
-              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+              <i class="fa-solid fa-arrow-right text-[11px] sm:text-xs group-hover:translate-x-1 transition-transform"></i>
             </a>
 
-            <a href="https://drive.google.com/file/d/1LQzeZeenscaKFG0rm2oVbRsSRc5iS3gR/view?usp=sharing"
-              onclick="downloadResume(event)"
-              class="px-6 py-3.5 rounded-xl glass-panel hover:bg-white/10 text-white font-semibold text-sm border border-purple-500/30 transition-all duration-300 flex items-center gap-2">
-              <i class="fa-solid fa-file-arrow-down text-purple-400"></i>
-              <span>Download Resume</span>
-            </a>
+            <!-- Secondary Actions: 2-Column Side-by-Side Grid on Mobile -->
+            <div class="grid grid-cols-2 gap-2 w-full sm:w-auto sm:flex sm:items-center sm:gap-3">
+              <a href="https://drive.google.com/file/d/1LQzeZeenscaKFG0rm2oVbRsSRc5iS3gR/view?usp=sharing"
+                onclick="downloadResume(event)"
+                class="w-full sm:w-auto px-3 sm:px-6 py-2 sm:py-3.5 rounded-lg sm:rounded-xl glass-panel hover:bg-white/10 text-white font-semibold text-xs sm:text-sm border border-purple-500/30 transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2">
+                <i class="fa-solid fa-file-arrow-down text-purple-400 text-xs sm:text-sm"></i>
+                <span class="sm:hidden">Resume</span>
+                <span class="hidden sm:inline">Download Resume</span>
+              </a>
 
-            <button id="recruiterQuickViewBtn" type="button"
-              class="px-6 py-3.5 rounded-xl border border-cyan-400/40 hover:border-cyan-300 bg-cyan-400/5 hover:bg-cyan-400/10 text-cyan-100 font-semibold text-sm transition-all duration-300 flex items-center gap-2">
-              <i class="fa-solid fa-bolt text-cyan-300"></i>
-              <span>Recruiter Quick View</span>
-            </button>
+              <button id="recruiterQuickViewBtn" type="button"
+                class="w-full sm:w-auto px-3 sm:px-6 py-2 sm:py-3.5 rounded-lg sm:rounded-xl border border-cyan-400/40 hover:border-cyan-300 bg-cyan-400/5 hover:bg-cyan-400/10 text-cyan-100 font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2">
+                <i class="fa-solid fa-bolt text-cyan-300 text-xs sm:text-sm"></i>
+                <span class="sm:hidden">Quick View</span>
+                <span class="hidden sm:inline">Recruiter Quick View</span>
+              </button>
+            </div>
           </div>
 
           <!-- Immediate proof points for recruiters (Clickable Proof Navigation) -->
-          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 w-full max-w-xl">
-            <a href="#projects" class="group block p-2 rounded-xl hover:bg-white/5 transition-all">
+          <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-2.5 sm:pt-6 border-t border-white/10 w-full max-w-xl">
+            <a href="#projects" class="group block p-1 sm:p-2 rounded-xl hover:bg-white/5 transition-all">
               <div
-                class="font-heading text-2xl font-bold text-white flex items-center gap-1.5 group-hover:text-purple-400 transition-colors">
+                class="font-heading text-base sm:text-2xl font-bold text-white flex items-center gap-1 group-hover:text-purple-400 transition-colors">
                 <span>100K+</span>
                 <i
-                  class="fa-solid fa-arrow-up-right-from-square text-[10px] text-purple-400/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                  class="fa-solid fa-arrow-up-right-from-square text-[8px] sm:text-[10px] text-purple-400/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
               </div>
-              <div class="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">Ride Bookings Analyzed
+              <div class="text-[9px] sm:text-xs text-gray-400 group-hover:text-gray-300 transition-colors">Ride Bookings
               </div>
             </a>
 
-            <a href="#experience" class="group block p-2 rounded-xl hover:bg-white/5 transition-all">
+            <a href="#experience" class="group block p-1 sm:p-2 rounded-xl hover:bg-white/5 transition-all">
               <div
-                class="font-heading text-2xl font-bold text-white flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
+                class="font-heading text-base sm:text-2xl font-bold text-white flex items-center gap-1 group-hover:text-blue-400 transition-colors">
                 <span>30+</span>
                 <i
-                  class="fa-solid fa-arrow-up-right-from-square text-[10px] text-blue-400/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                  class="fa-solid fa-arrow-up-right-from-square text-[8px] sm:text-[10px] text-blue-400/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
               </div>
-              <div class="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                Daily SLA Incidents Handled
+              <div class="text-[9px] sm:text-xs text-gray-400 group-hover:text-gray-300 transition-colors">Daily Incidents
               </div>
             </a>
 
-            <a href="#projects" class="group block p-2 rounded-xl hover:bg-white/5 transition-all">
+            <a href="#projects" class="group block p-1 sm:p-2 rounded-xl hover:bg-white/5 transition-all">
               <div
-                class="font-heading text-2xl font-bold text-white flex items-center gap-1.5 group-hover:text-cyan-400 transition-colors">
+                class="font-heading text-base sm:text-2xl font-bold text-white flex items-center gap-1 group-hover:text-cyan-400 transition-colors">
                 <span>15+</span>
                 <i
-                  class="fa-solid fa-arrow-up-right-from-square text-[10px] text-cyan-400/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                  class="fa-solid fa-arrow-up-right-from-square text-[8px] sm:text-[10px] text-cyan-400/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
               </div>
-              <div class="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                End-to-End BI Projects
+              <div class="text-[9px] sm:text-xs text-gray-400 group-hover:text-gray-300 transition-colors">BI Projects
               </div>
             </a>
           </div>
@@ -1194,23 +1198,23 @@
                   </div>
                   <pre
                     class="text-gray-200 overflow-x-auto max-h-56 text-[11px] leading-relaxed p-2 rounded bg-slate-900 border border-white/5 font-mono"><code>WITH CancellationSummary AS (
-    SELECT 
-        Booking_ID,
-        Vehicle_Type,
-        Booking_Status,
-        Canceled_Rides_by_Driver,
-        Booking_Value
-    FROM ola_bookings
-)
-SELECT 
-    Vehicle_Type,
-    COUNT(Booking_ID) AS Total_Rides,
-    SUM(CASE WHEN Booking_Status = 'Success' THEN 1 ELSE 0 END) AS Completed_Rides,
-    SUM(CASE WHEN Canceled_Rides_by_Driver = 'Personal & Car related issue' THEN 1 ELSE 0 END) AS Driver_Personal_Cancels,
-    ROUND(SUM(CASE WHEN Booking_Status = 'Canceled by Driver' THEN Booking_Value ELSE 0 END), 2) AS Lost_Revenue_INR
-FROM CancellationSummary
-GROUP BY Vehicle_Type
-ORDER BY Lost_Revenue_INR DESC;</code></pre>
+                        SELECT 
+                            Booking_ID,
+                            Vehicle_Type,
+                            Booking_Status,
+                            Canceled_Rides_by_Driver,
+                            Booking_Value
+                        FROM ola_bookings
+                    )
+                    SELECT 
+                        Vehicle_Type,
+                        COUNT(Booking_ID) AS Total_Rides,
+                        SUM(CASE WHEN Booking_Status = 'Success' THEN 1 ELSE 0 END) AS Completed_Rides,
+                        SUM(CASE WHEN Canceled_Rides_by_Driver = 'Personal & Car related issue' THEN 1 ELSE 0 END) AS Driver_Personal_Cancels,
+                        ROUND(SUM(CASE WHEN Booking_Status = 'Canceled by Driver' THEN Booking_Value ELSE 0 END), 2) AS Lost_Revenue_INR
+                    FROM CancellationSummary
+                    GROUP BY Vehicle_Type
+                    ORDER BY Lost_Revenue_INR DESC;</code></pre>
                   <div
                     class="p-2.5 rounded-xl bg-purple-900/20 border border-purple-500/20 text-gray-300 text-[11px] leading-normal font-sans">
                     <strong class="text-purple-300 font-mono block mb-0.5">What it does & Why it matters:</strong>
@@ -1298,14 +1302,14 @@ ORDER BY Lost_Revenue_INR DESC;</code></pre>
                 </div>
                 <pre
                   class="text-gray-200 overflow-x-auto max-h-56 text-[11px] leading-relaxed p-2 rounded bg-slate-900 border border-white/5 font-mono"><code>Repeat_Customer_Revenue_PCT = 
-VAR TotalRevenue = SUM(CustomerShopping[Purchase Amount (USD)])
-VAR RepeatCustomerRevenue = 
-    CALCULATE(
-        SUM(CustomerShopping[Purchase Amount (USD)]),
-        CustomerShopping[Previous Purchases] > 5
-    )
-RETURN 
-    DIVIDE(RepeatCustomerRevenue, TotalRevenue, 0)</code></pre>
+                    VAR TotalRevenue = SUM(CustomerShopping[Purchase Amount (USD)])
+                    VAR RepeatCustomerRevenue = 
+                        CALCULATE(
+                            SUM(CustomerShopping[Purchase Amount (USD)]),
+                            CustomerShopping[Previous Purchases] > 5
+                        )
+                    RETURN 
+                        DIVIDE(RepeatCustomerRevenue, TotalRevenue, 0)</code></pre>
                 <div
                   class="p-2.5 rounded-xl bg-cyan-900/20 border border-cyan-500/20 text-gray-300 text-[11px] leading-normal font-sans">
                   <strong class="text-cyan-300 font-mono block mb-0.5">What it does & Why it matters:</strong>
