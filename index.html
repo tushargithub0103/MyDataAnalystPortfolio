@@ -344,36 +344,34 @@
     class="hidden fixed inset-0 z-[110] bg-slate-950/85 backdrop-blur-sm p-4 sm:p-8 overflow-y-auto" role="dialog"
     aria-modal="true" aria-labelledby="recruiterQuickViewTitle">
     <div
-      class="relative max-w-3xl mx-auto my-4 glass-panel rounded-3xl border border-purple-400/30 p-6 sm:p-8 shadow-2xl">
+      class="relative max-w-3xl mx-auto my-2 sm:my-4 glass-panel rounded-2xl sm:rounded-3xl border border-purple-400/30 p-4 sm:p-8 shadow-2xl">
       <button id="closeRecruiterQuickView" type="button" aria-label="Close recruiter quick view"
-        class="absolute top-5 right-5 w-9 h-9 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors">
-        <i class="fa-solid fa-xmark text-lg"></i>
+        class="absolute top-4 right-4 sm:top-5 sm:right-5 w-8 h-8 sm:w-9 sm:h-9 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors">
+        <i class="fa-solid fa-xmark text-base sm:text-lg"></i>
       </button>
-      <p class="text-xs font-mono uppercase tracking-widest text-purple-300 mb-2">
+      <p class="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-purple-300 mb-1 sm:mb-2">
         Recruiter Quick View
       </p>
-      <h2 id="recruiterQuickViewTitle" class="font-heading text-3xl sm:text-4xl font-bold text-white pr-10">
+      <h2 id="recruiterQuickViewTitle" class="font-heading text-xl sm:text-4xl font-bold text-white pr-8 sm:pr-10">
         Tushar More — Data Analyst
       </h2>
-      <p class="text-gray-300 mt-3">
+      <p class="text-gray-300 text-xs sm:text-base mt-2 sm:mt-3">
         Power BI, SQL, Excel, and Python for operational reporting,
         dashboards, and business insights.
       </p>
 
-      <div class="grid sm:grid-cols-3 gap-3 my-6">
-        <div class="rounded-2xl bg-slate-900/80 border border-white/10 p-4">
-          <p class="text-2xl font-heading font-bold text-white">100K+</p>
-          <p class="text-xs text-gray-400 mt-1">Ride bookings analyzed</p>
+      <div class="grid grid-cols-3 gap-2 sm:gap-3 my-4 sm:my-6">
+        <div class="rounded-xl sm:rounded-2xl bg-slate-900/80 border border-white/10 p-2.5 sm:p-4">
+          <p class="text-lg sm:text-2xl font-heading font-bold text-white">100K+</p>
+          <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 sm:mt-1">Ride bookings</p>
         </div>
-        <div class="rounded-2xl bg-slate-900/80 border border-white/10 p-4">
-          <p class="text-2xl font-heading font-bold text-white">30+</p>
-          <p class="text-xs text-gray-400 mt-1">
-            Daily SLA incidents handled
-          </p>
+        <div class="rounded-xl sm:rounded-2xl bg-slate-900/80 border border-white/10 p-2.5 sm:p-4">
+          <p class="text-lg sm:text-2xl font-heading font-bold text-white">30+</p>
+          <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 sm:mt-1">Daily SLA</p>
         </div>
-        <div class="rounded-2xl bg-slate-900/80 border border-white/10 p-4">
-          <p class="text-2xl font-heading font-bold text-white">15+</p>
-          <p class="text-xs text-gray-400 mt-1">End-to-End BI Projects</p>
+        <div class="rounded-xl sm:rounded-2xl bg-slate-900/80 border border-white/10 p-2.5 sm:p-4">
+          <p class="text-lg sm:text-2xl font-heading font-bold text-white">15+</p>
+          <p class="text-[10px] sm:text-xs text-gray-400 mt-0.5 sm:mt-1">BI Projects</p>
         </div>
       </div>
 
@@ -584,27 +582,51 @@
 
     <!-- Mobile Drawer -->
     <div id="mobileMenu"
-      class="hidden lg:hidden max-w-7xl mx-auto mt-2 glass-panel rounded-2xl p-6 border border-white/10">
-      <div class="flex flex-col gap-4 text-sm font-medium">
-        <a href="#hero" class="mobile-link hover:text-purple-400 py-1">Home</a>
-        <a href="#about" class="mobile-link hover:text-purple-400 py-1">About</a>
-        <a href="#projects" class="mobile-link hover:text-purple-400 py-1">Projects</a>
-        <a href="#experience" class="mobile-link hover:text-purple-400 py-1">Experience</a>
-        <a href="#skills" class="mobile-link hover:text-purple-400 py-1">Skills</a>
-        <a href="#certificates" class="mobile-link hover:text-purple-400 py-1">Certificates</a>
-        <a href="#contact" class="mobile-link hover:text-purple-400 py-1">Contact</a>
-        <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+      class="hidden lg:hidden max-w-7xl mx-auto mt-2 glass-panel rounded-2xl p-4 border border-white/10 shadow-2xl">
+      <div class="flex flex-col gap-1.5 text-xs font-medium">
+        <a href="#hero"
+          class="mobile-link flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-purple-600/20 hover:text-purple-300 text-gray-200 transition-all">
+          <i class="fa-solid fa-house text-purple-400 w-4 text-center"></i><span>Home</span>
+        </a>
+        <a href="#about"
+          class="mobile-link flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-purple-600/20 hover:text-purple-300 text-gray-200 transition-all">
+          <i class="fa-solid fa-user-astronaut text-purple-400 w-4 text-center"></i><span>About</span>
+        </a>
+        <a href="#projects"
+          class="mobile-link flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-purple-600/20 hover:text-purple-300 text-gray-200 transition-all">
+          <i class="fa-solid fa-folder-open text-purple-400 w-4 text-center"></i><span>Projects</span>
+        </a>
+        <a href="#experience"
+          class="mobile-link flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-purple-600/20 hover:text-purple-300 text-gray-200 transition-all">
+          <i class="fa-solid fa-briefcase text-purple-400 w-4 text-center"></i><span>Experience</span>
+        </a>
+        <a href="#skills"
+          class="mobile-link flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-purple-600/20 hover:text-purple-300 text-gray-200 transition-all">
+          <i class="fa-solid fa-gears text-purple-400 w-4 text-center"></i><span>Skills</span>
+        </a>
+        <a href="#certificates"
+          class="mobile-link flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-purple-600/20 hover:text-purple-300 text-gray-200 transition-all">
+          <i class="fa-solid fa-certificate text-purple-400 w-4 text-center"></i><span>Certificates</span>
+        </a>
+        <a href="#contact"
+          class="mobile-link flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-purple-600/20 hover:text-purple-300 text-gray-200 transition-all">
+          <i class="fa-solid fa-paper-plane text-purple-400 w-4 text-center"></i><span>Contact</span>
+        </a>
+        <div class="pt-2.5 border-t border-white/10 flex flex-col gap-2">
           <a href="https://drive.google.com/file/d/1LQzeZeenscaKFG0rm2oVbRsSRc5iS3gR/view?usp=sharing"
             onclick="downloadResume(event)"
-            class="w-full text-center py-2.5 rounded-xl bg-purple-600 text-white font-semibold text-xs">Download
-            Resume</a>
+            class="w-full text-center py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs shadow-glow transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span>Download Resume</span>
+          </a>
         </div>
       </div>
     </div>
   </header>
 
   <!-- HERO SECTION -->
-  <section id="hero" class="relative min-h-screen pt-28 sm:pt-32 pb-8 sm:pb-20 flex items-center bg-grid-pattern overflow-hidden">
+  <section id="hero"
+    class="relative min-h-screen pt-28 sm:pt-32 pb-8 sm:pb-20 flex items-center bg-grid-pattern overflow-hidden">
     <div
       class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none animate-pulse-glow">
     </div>
@@ -651,12 +673,14 @@
           </p>
 
           <!-- CTA Buttons (Ultra-Compact Mobile 2-Row + Desktop Flex Layout) -->
-          <div class="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-4 pt-1 sm:pt-2">
+          <div
+            class="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-4 pt-1 sm:pt-2">
             <!-- Primary Action: View Best Case Study -->
             <a href="#projects"
               class="w-full sm:w-auto px-4 sm:px-7 py-2 sm:py-3.5 rounded-lg sm:rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-semibold text-xs sm:text-sm shadow-glow transition-all duration-300 flex items-center justify-center gap-2 group">
               <span>View Best Case Study</span>
-              <i class="fa-solid fa-arrow-right text-[11px] sm:text-xs group-hover:translate-x-1 transition-transform"></i>
+              <i
+                class="fa-solid fa-arrow-right text-[11px] sm:text-xs group-hover:translate-x-1 transition-transform"></i>
             </a>
 
             <!-- Secondary Actions: 2-Column Side-by-Side Grid on Mobile -->
@@ -698,7 +722,8 @@
                 <i
                   class="fa-solid fa-arrow-up-right-from-square text-[8px] sm:text-[10px] text-blue-400/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
               </div>
-              <div class="text-[9px] sm:text-xs text-gray-400 group-hover:text-gray-300 transition-colors">Daily Incidents
+              <div class="text-[9px] sm:text-xs text-gray-400 group-hover:text-gray-300 transition-colors">Daily
+                Incidents
               </div>
             </a>
 
@@ -722,7 +747,7 @@
           </div>
 
           <div
-            class="relative z-10 w-80 h-[410px] sm:w-[380px] sm:h-[470px] rounded-3xl glass-panel p-3 border border-purple-500/30 shadow-2xl overflow-hidden group">
+            class="relative z-10 w-64 h-[350px] sm:w-[380px] sm:h-[470px] rounded-3xl glass-panel p-2.5 sm:p-3 border border-purple-500/30 shadow-2xl overflow-hidden group">
             <div
               class="w-full h-full rounded-2xl bg-gradient-to-b from-slate-800 to-slate-950 flex flex-col justify-end items-center relative overflow-hidden">
               <div class="absolute inset-0 flex items-center justify-center">
@@ -734,23 +759,23 @@
                 </svg>
               </div>
 
-              <div class="z-10 flex flex-col items-center mb-5 text-center px-4">
+              <div class="z-10 flex flex-col items-center mb-4 sm:mb-5 text-center px-3 sm:px-4">
                 <div
-                  class="w-60 h-60 sm:w-72 sm:h-72 rounded-full border-2 border-purple-400 p-1 mb-3 shadow-glow bg-slate-900 flex items-center justify-center overflow-hidden">
+                  class="w-44 h-44 sm:w-72 sm:h-72 rounded-full border-2 border-purple-400 p-1 mb-2 sm:mb-3 shadow-glow bg-slate-900 flex items-center justify-center overflow-hidden">
                   <img src="TusharMoreImage.png" alt="Tushar More" class="w-full h-full object-cover rounded-full"
                     onerror="
                         this.onerror = null;
                         this.src = 'tusharmoreimage.png';
                       " />
                 </div>
-                <h3 class="font-heading font-bold text-white text-xl">
+                <h3 class="font-heading font-bold text-white text-base sm:text-xl">
                   Tushar More
                 </h3>
-                <p class="text-xs text-purple-300 font-mono">
+                <p class="text-[11px] sm:text-xs text-purple-300 font-mono">
                   Wipro Ltd | CS Graduate
                 </p>
                 <span
-                  class="mt-2 text-[11px] px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  class="mt-1.5 text-[10px] sm:text-[11px] px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
                   <i class="fa-solid fa-shield-halved mr-1"></i> Data
                   Storyteller
                 </span>
@@ -762,35 +787,35 @@
 
           <!-- 1. SQL Logo -->
           <div
-            class="absolute top-2 left-2 sm:left-4 z-20 glass-panel p-3 rounded-xl border border-purple-500/30 shadow-glow animate-float flex items-center justify-center hover:scale-110 transition-transform">
-            <i class="fa-solid fa-database text-purple-400 text-2xl" title="SQL"></i>
+            class="absolute top-2 left-1 sm:left-4 z-20 glass-panel p-2 sm:p-3 rounded-xl border border-purple-500/30 shadow-glow animate-float flex items-center justify-center hover:scale-110 transition-transform">
+            <i class="fa-solid fa-database text-purple-400 text-lg sm:text-2xl" title="SQL"></i>
           </div>
 
           <!-- 2. Python Logo -->
           <div
-            class="absolute top-4 right-2 sm:right-4 z-20 glass-panel p-3 rounded-xl border border-blue-500/30 shadow-glowBlue animate-float-delayed flex items-center justify-center hover:scale-110 transition-transform">
-            <i class="fa-brands fa-python text-blue-400 text-2xl" title="Python"></i>
+            class="absolute top-4 right-1 sm:right-4 z-20 glass-panel p-2 sm:p-3 rounded-xl border border-blue-500/30 shadow-glowBlue animate-float-delayed flex items-center justify-center hover:scale-110 transition-transform">
+            <i class="fa-brands fa-python text-blue-400 text-lg sm:text-2xl" title="Python"></i>
           </div>
 
           <!-- 3. Power BI Logo -->
           <div
-            class="absolute top-1/2 -translate-y-1/2 right-1 sm:right-2 z-20 glass-panel p-3 rounded-xl border border-amber-500/30 shadow-glow flex items-center justify-center animate-float hover:scale-110 transition-transform"
+            class="absolute top-1/2 -translate-y-1/2 right-0 sm:right-2 z-20 glass-panel p-2 sm:p-3 rounded-xl border border-amber-500/30 shadow-glow flex items-center justify-center animate-float hover:scale-110 transition-transform"
             style="animation-delay: 1.5s">
-            <i class="fa-solid fa-chart-simple text-amber-400 text-2xl" title="Power BI"></i>
+            <i class="fa-solid fa-chart-simple text-amber-400 text-lg sm:text-2xl" title="Power BI"></i>
           </div>
 
           <!-- 4. Excel Logo -->
           <div
-            class="absolute bottom-12 left-1 sm:left-2 z-20 glass-panel p-3 rounded-xl border border-emerald-500/30 shadow-glow flex items-center justify-center animate-float-delayed hover:scale-110 transition-transform"
+            class="absolute bottom-10 left-0 sm:left-2 z-20 glass-panel p-2 sm:p-3 rounded-xl border border-emerald-500/30 shadow-glow flex items-center justify-center animate-float-delayed hover:scale-110 transition-transform"
             style="animation-delay: 2.5s">
-            <i class="fa-solid fa-file-excel text-emerald-400 text-2xl" title="Excel"></i>
+            <i class="fa-solid fa-file-excel text-emerald-400 text-lg sm:text-2xl" title="Excel"></i>
           </div>
 
           <!-- 5. Chart Logo -->
           <div
-            class="absolute bottom-2 right-10 sm:right-14 z-20 glass-panel p-3 rounded-xl border border-cyan-500/30 shadow-glowCyan animate-float flex items-center justify-center hover:scale-110 transition-transform"
+            class="absolute bottom-1 right-8 sm:right-14 z-20 glass-panel p-2 sm:p-3 rounded-xl border border-cyan-500/30 shadow-glowCyan animate-float flex items-center justify-center hover:scale-110 transition-transform"
             style="animation-delay: 4s">
-            <i class="fa-solid fa-chart-line text-cyan-400 text-2xl" title="Analytics Chart"></i>
+            <i class="fa-solid fa-chart-line text-cyan-400 text-lg sm:text-2xl" title="Analytics Chart"></i>
           </div>
         </div>
       </div>
@@ -903,43 +928,44 @@
   </div>
 
   <!-- ABOUT SECTION -->
-  <section id="about" class="py-12 sm:py-24 relative z-10">
+  <section id="about" class="py-8 sm:py-24 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-2">
+      <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-16">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-1.5 sm:mb-2">
           Who I Am
         </h2>
-        <p class="font-heading text-3xl sm:text-4xl font-bold text-white">
+        <p class="font-heading text-2xl sm:text-4xl font-bold text-white">
           Bridging Data Analytics &amp; Operational Excellence
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      <div class="grid lg:grid-cols-12 gap-4 sm:gap-8 items-stretch">
         <!-- Story Card -->
-        <div class="lg:col-span-7 glass-panel p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+        <div
+          class="lg:col-span-7 glass-panel p-4 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-3 mb-6">
+            <div class="flex items-center gap-3 mb-3.5 sm:mb-6">
               <div
-                class="w-12 h-12 rounded-2xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl">
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-base sm:text-xl">
                 <i class="fa-solid fa-user-astronaut"></i>
               </div>
               <div>
-                <h3 class="font-heading text-xl font-bold text-white">
+                <h3 class="font-heading text-base sm:text-xl font-bold text-white">
                   Everythink About Me
                 </h3>
-                <p class="text-xs text-gray-400">
+                <p class="text-[11px] sm:text-xs text-gray-400">
                   Computer Science Engineering Graduate &amp; Analyst
                 </p>
               </div>
             </div>
 
-            <p class="text-gray-300 leading-relaxed mb-4 text-sm sm:text-base">
+            <p class="text-gray-300 leading-relaxed mb-2.5 sm:mb-4 text-xs sm:text-base">
               I am a <strong class="text-white">Data Analyst</strong> with
               hands-on experience in MIS reporting, supply chain operational
               analytics, incident tracking, and stakeholder reporting at
               <strong class="text-purple-400">Wipro Ltd.</strong>
             </p>
-            <p class="text-gray-300 leading-relaxed mb-4 text-sm sm:text-base">
+            <p class="text-gray-300 leading-relaxed mb-2.5 sm:mb-4 text-xs sm:text-base">
               My technical foundation spans across
               <strong class="text-white">SQL (MySQL &amp; PostgreSQL), Python (Pandas, NumPy,
                 Scikit-learn), Power BI (DAX), and Advanced Excel</strong>. I specialize in turning complex datasets
@@ -947,7 +973,7 @@
               KPIs, interactive dashboards, and actionable business
               intelligence.
             </p>
-            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            <p class="text-gray-400 text-[11px] sm:text-sm leading-relaxed">
               With a strong academic background in Computer Science
               Engineering and hands-on exposure to supply chain SLA
               compliance, I connect day-to-day operational data work
@@ -955,12 +981,13 @@
             </p>
 
             <!-- Leadership & Extracurriculars -->
-            <div class="mt-6 pt-5 border-t border-white/10">
-              <div class="flex items-center gap-2 mb-2">
-                <i class="fa-solid fa-crown text-purple-400 text-sm"></i>
-                <span class="font-heading font-bold text-white text-sm">ACSES &amp; CSI Club Editorial Head</span>
+            <div class="mt-4 pt-3 sm:mt-6 sm:pt-5 border-t border-white/10">
+              <div class="flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-crown text-purple-400 text-xs sm:text-sm"></i>
+                <span class="font-heading font-bold text-white text-xs sm:text-sm">ACSES &amp; CSI Club Editorial
+                  Head</span>
               </div>
-              <p class="text-xs text-gray-400 leading-relaxed ps-5">
+              <p class="text-[11px] sm:text-xs text-gray-400 leading-relaxed ps-4 sm:ps-5">
                 Led an 8-member publication team managing academic columns, newsletter releases, technical event
                 logistics, and marketing promotions.
               </p>
@@ -969,23 +996,24 @@
         </div>
 
         <!-- Education & Background Cards -->
-        <div class="lg:col-span-5 flex flex-col gap-6">
+        <div class="lg:col-span-5 flex flex-col gap-3.5 sm:gap-6">
           <!-- B.Tech Card -->
-          <div class="glass-panel p-6 rounded-3xl border border-white/10 glass-panel-hover">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg">
+          <div class="glass-panel p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 glass-panel-hover">
+            <div class="flex items-center gap-3 mb-2.5 sm:mb-4">
+              <div
+                class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-base sm:text-lg">
                 <i class="fa-solid fa-graduation-cap"></i>
               </div>
               <div>
-                <h4 class="font-heading font-bold text-white text-base">
+                <h4 class="font-heading font-bold text-white text-xs sm:text-base">
                   B.Tech in Computer Science &amp; Eng.
                 </h4>
-                <p class="text-xs text-gray-400">
+                <p class="text-[10px] sm:text-xs text-gray-400">
                   Sanjay Ghodawat University, Kolhapur | May 2024
                 </p>
               </div>
             </div>
-            <p class="text-xs text-gray-400 leading-relaxed">
+            <p class="text-[11px] sm:text-xs text-gray-400 leading-relaxed">
               Specialized in Data Structures, Relational Database Management
               Systems (RDBMS), Software Development, and Machine Learning
               algorithms.
@@ -993,30 +1021,30 @@
           </div>
 
           <!-- Diploma Card -->
-          <div class="glass-panel p-6 rounded-3xl border border-white/10 glass-panel-hover">
-            <div class="flex items-center gap-3 mb-4">
+          <div class="glass-panel p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 glass-panel-hover">
+            <div class="flex items-center gap-3 mb-2.5 sm:mb-4">
               <div
-                class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg">
+                class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-base sm:text-lg">
                 <i class="fa-solid fa-graduation-cap"></i>
               </div>
               <div>
-                <h4 class="font-heading font-bold text-white text-base">
+                <h4 class="font-heading font-bold text-white text-xs sm:text-base">
                   Diploma in Computer Engineering
                 </h4>
-                <p class="text-xs text-gray-400">
+                <p class="text-[10px] sm:text-xs text-gray-400">
                   Sanjay Ghodawat Polytechnic, Kolhapur | May 2021
                 </p>
               </div>
             </div>
-            <p class="text-xs text-gray-400 leading-relaxed">
+            <p class="text-[11px] sm:text-xs text-gray-400 leading-relaxed">
               Laid the programming foundations in C/Java, Database Management Systems (SQL), and web design principles.
             </p>
           </div>
 
           <!-- Competencies Card -->
           <div
-            class="glass-panel p-6 rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-purple-950/20 glass-panel-hover">
-            <h4 class="font-heading font-bold text-white text-sm mb-3">
+            class="glass-panel p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-purple-950/20 glass-panel-hover">
+            <h4 class="font-heading font-bold text-white text-xs sm:text-sm mb-2.5 sm:mb-3">
               Core Technical Competencies
             </h4>
             <div class="flex flex-wrap gap-2">
@@ -1504,22 +1532,22 @@
   </section>
 
   <!-- EXPERIENCE SECTION -->
-  <section id="experience" class="py-12 sm:py-24 relative z-10 bg-slate-950/50 border-y border-white/5">
+  <section id="experience" class="py-8 sm:py-24 relative z-10 bg-slate-950/50 border-y border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-2">
+      <div class="text-center max-w-3xl mx-auto mb-5 sm:mb-16">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-1.5 sm:mb-2">
           Career Journey
         </h2>
-        <p class="font-heading text-3xl sm:text-4xl font-bold text-white">
+        <p class="font-heading text-2xl sm:text-4xl font-bold text-white">
           Work Experience & Impact
         </p>
       </div>
 
-      <div class="relative border-l-2 border-purple-500/30 ml-4 sm:ml-32 space-y-12">
+      <div class="relative border-l-2 border-purple-500/30 ml-3 sm:ml-32 space-y-5 sm:space-y-12">
         <!-- 1. BDreamz Global Solutions (Collaboration with Besant Technologies) -->
-        <div class="relative pl-8 group">
+        <div class="relative pl-5 sm:pl-8 group">
           <div
-            class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-cyan-500 border-4 border-slate-950 group-hover:scale-125 transition-transform shadow-glowCyan">
+            class="absolute -left-[9px] sm:-left-[11px] top-1.5 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-cyan-500 border-2 sm:border-4 border-slate-950 group-hover:scale-125 transition-transform shadow-glowCyan">
           </div>
 
           <div
@@ -1527,25 +1555,27 @@
             Mar 2026 – Aug 2026
           </div>
 
-          <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-cyan-500/30 glass-panel-hover">
-            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div class="glass-panel p-3.5 sm:p-8 rounded-2xl sm:rounded-3xl border border-cyan-500/30 glass-panel-hover">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 mb-2 sm:mb-3">
               <div>
-                <span class="sm:hidden whitespace-nowrap text-xs font-mono text-cyan-400 block mb-1">Mar 2026 – Aug
+                <span class="sm:hidden whitespace-nowrap text-[10px] font-mono text-cyan-400 block mb-0.5">Mar 2026 –
+                  Aug
                   2026</span>
                 <div class="flex items-center gap-2">
-                  <h3 class="font-heading text-xl font-bold text-white">
+                  <h3 class="font-heading text-sm sm:text-xl font-bold text-white">
                     Data Analytics Intern
                   </h3>
                   <span
-                    class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                    class="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
                     Verified Internship Certificate
                   </span>
                 </div>
-                <p class="text-sm text-cyan-300 font-medium">
+                <p class="text-xs sm:text-sm text-cyan-300 font-medium">
                   BDreamz Global Solutions Pvt. Ltd. | (Collaborated with Besant Technologies)
                 </p>
               </div>
-              <span class="text-xs px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+              <span
+                class="text-[10px] sm:text-xs px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
                 <i class="fa-solid fa-location-dot mr-1"></i> Bangalore, KA
               </span>
             </div>
@@ -1605,9 +1635,9 @@
         </div>
 
         <!-- 2. Besant Technologies (Professional Training) -->
-        <div class="relative pl-8 group">
+        <div class="relative pl-5 sm:pl-8 group">
           <div
-            class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-emerald-500 border-4 border-slate-950 group-hover:scale-125 transition-transform">
+            class="absolute -left-[9px] sm:-left-[11px] top-1.5 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-emerald-500 border-2 sm:border-4 border-slate-950 group-hover:scale-125 transition-transform">
           </div>
 
           <div
@@ -1615,32 +1645,33 @@
             Jan 2026 – Feb 2026
           </div>
 
-          <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 glass-panel-hover">
-            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div class="glass-panel p-3.5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 glass-panel-hover">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 mb-2 sm:mb-3">
               <div>
-                <span class="sm:hidden whitespace-nowrap text-xs font-mono text-emerald-400 block mb-1">Jan 2026 – Feb
+                <span class="sm:hidden whitespace-nowrap text-[10px] font-mono text-emerald-400 block mb-0.5">Jan 2026 –
+                  Feb
                   2026</span>
-                <h3 class="font-heading text-xl font-bold text-white">
+                <h3 class="font-heading text-sm sm:text-xl font-bold text-white">
                   Professional Training — Data Analytics with GenAI
                 </h3>
-                <p class="text-sm text-emerald-300 font-medium">
+                <p class="text-xs sm:text-sm text-emerald-300 font-medium">
                   Besant Technologies | Bangalore, KA
                 </p>
               </div>
               <span
-                class="text-xs px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                class="text-[10px] sm:text-xs px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
                 <i class="fa-solid fa-graduation-cap mr-1"></i> Intensive Training
               </span>
             </div>
 
-            <ul class="space-y-3 text-gray-300 text-sm mt-4">
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-chevron-right text-emerald-400 text-xs mt-1"></i>
+            <ul class="space-y-1.5 sm:space-y-3 text-gray-300 text-xs sm:text-sm mt-2.5 sm:mt-4">
+              <li class="flex items-start gap-2.5 sm:gap-3">
+                <i class="fa-solid fa-chevron-right text-emerald-400 text-[10px] sm:text-xs mt-1"></i>
                 <span>Completed intensive training in SQL, Advanced Excel, Python, Power BI, and GenAI analytics
                   tools.</span>
               </li>
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-chevron-right text-emerald-400 text-xs mt-1"></i>
+              <li class="flex items-start gap-2.5 sm:gap-3">
+                <i class="fa-solid fa-chevron-right text-emerald-400 text-[10px] sm:text-xs mt-1"></i>
                 <span>Applied practical coursework to build end-to-end data pipelines, data modeling, and interactive
                   business dashboards.</span>
               </li>
@@ -1649,10 +1680,10 @@
         </div>
 
         <!-- 3. Wipro Ltd -->
-        <div class="relative pl-8 group">
+        <div class="relative pl-5 sm:pl-8 group">
           <!-- Dot -->
           <div
-            class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-purple-600 border-4 border-slate-950 group-hover:scale-125 transition-transform shadow-glow">
+            class="absolute -left-[9px] sm:-left-[11px] top-1.5 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-600 border-2 sm:border-4 border-slate-950 group-hover:scale-125 transition-transform shadow-glow">
           </div>
 
           <!-- Time Label (Desktop) -->
@@ -1662,52 +1693,56 @@
           </div>
 
           <!-- Experience Card -->
-          <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 glass-panel-hover">
-            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div class="glass-panel p-3.5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 glass-panel-hover">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 mb-2 sm:mb-3">
               <div>
-                <span class="sm:hidden whitespace-nowrap text-xs font-mono text-purple-400 block mb-1">May 2025 – Jan
+                <span class="sm:hidden whitespace-nowrap text-[10px] font-mono text-purple-400 block mb-0.5">May 2025 –
+                  Jan
                   2026</span>
-                <h3 class="font-heading text-xl font-bold text-white">
+                <h3 class="font-heading text-sm sm:text-xl font-bold text-white">
                   Associate – Production Agent
                 </h3>
-                <p class="text-sm text-purple-300 font-medium">
+                <p class="text-xs sm:text-sm text-purple-300 font-medium">
                   Wipro Ltd. | UK Government Telecom Supply Chain Account
                 </p>
               </div>
-              <span class="text-xs px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
+              <span
+                class="text-[10px] sm:text-xs px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
                 <i class="fa-solid fa-location-dot mr-1"></i> Pune, MH
               </span>
             </div>
 
             <!-- What I Worked With Highlight Strip -->
-            <div class="my-4 p-3 rounded-2xl bg-slate-900/90 border border-white/5 space-y-1.5">
-              <span class="text-[11px] font-mono uppercase text-purple-300 tracking-wider block">Key Enterprise
+            <div
+              class="my-2.5 sm:my-4 p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-slate-900/90 border border-white/5 space-y-1.5">
+              <span class="text-[10px] sm:text-[11px] font-mono uppercase text-purple-300 tracking-wider block">Key
+                Enterprise
                 Exposure</span>
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-1.5 sm:gap-2">
                 <span
-                  class="text-xs font-mono px-2.5 py-1 rounded-lg bg-purple-500/15 text-purple-200 border border-purple-400/20 flex items-center gap-1.5">
+                  class="text-[10px] sm:text-xs font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg bg-purple-500/15 text-purple-200 border border-purple-400/20 flex items-center gap-1.5">
                   <i class="fa-solid fa-headset text-purple-400 text-[10px]"></i> ServiceNow SLA Tracking
                 </span>
                 <span
-                  class="text-xs font-mono px-2.5 py-1 rounded-lg bg-blue-500/15 text-blue-200 border border-blue-400/20 flex items-center gap-1.5">
+                  class="text-[10px] sm:text-xs font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg bg-blue-500/15 text-blue-200 border border-blue-400/20 flex items-center gap-1.5">
                   <i class="fa-solid fa-chart-line text-blue-400 text-[10px]"></i> MIS Reporting
                 </span>
                 <span
-                  class="text-xs font-mono px-2.5 py-1 rounded-lg bg-cyan-500/15 text-cyan-200 border border-cyan-400/20 flex items-center gap-1.5">
+                  class="text-[10px] sm:text-xs font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg bg-cyan-500/15 text-cyan-200 border border-cyan-400/20 flex items-center gap-1.5">
                   <i class="fa-solid fa-gauge text-cyan-400 text-[10px]"></i> Operational KPI Tracking
                 </span>
                 <span
-                  class="text-xs font-mono px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-200 border border-emerald-400/20 flex items-center gap-1.5">
+                  class="text-[10px] sm:text-xs font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg bg-emerald-500/15 text-emerald-200 border border-emerald-400/20 flex items-center gap-1.5">
                   <i class="fa-solid fa-magnifying-glass text-emerald-400 text-[10px]"></i> Root Cause Analysis
                 </span>
                 <span
-                  class="text-xs font-mono px-2.5 py-1 rounded-lg bg-amber-500/15 text-amber-200 border border-amber-400/20 flex items-center gap-1.5">
+                  class="text-[10px] sm:text-xs font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg bg-amber-500/15 text-amber-200 border border-amber-400/20 flex items-center gap-1.5">
                   <i class="fa-solid fa-comments text-amber-400 text-[10px]"></i> Stakeholder Communication
                 </span>
               </div>
             </div>
 
-            <ul class="space-y-3 text-gray-300 text-sm mt-4">
+            <ul class="space-y-1.5 sm:space-y-3 text-gray-300 text-xs sm:text-sm mt-2.5 sm:mt-4">
               <li class="flex items-start gap-3">
                 <i class="fa-solid fa-chevron-right text-purple-400 text-xs mt-1"></i>
                 <span>Analysed <strong>30+ daily ServiceNow incidents</strong>,
@@ -1815,42 +1850,43 @@
   </section>
 
   <!-- SKILLS SECTION -->
-  <section id="skills" class="py-10 sm:py-16 relative z-10 bg-slate-950/50 border-y border-white/5">
+  <section id="skills" class="py-6 sm:py-16 relative z-10 bg-slate-950/50 border-y border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-2">
+      <div class="text-center max-w-3xl mx-auto mb-4 sm:mb-10">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-1.5 sm:mb-2">
           Technical Toolkit
         </h2>
-        <p class="font-heading text-3xl sm:text-4xl font-bold text-white">
+        <p class="font-heading text-2xl sm:text-4xl font-bold text-white">
           Skills &amp; Competencies
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 items-stretch">
         <!-- 1. Database & Data Core -->
         <div
-          class="glass-panel p-6 rounded-3xl border border-white/10 glass-panel-hover flex flex-col justify-between transition-all duration-300">
+          class="glass-panel p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 glass-panel-hover flex flex-col justify-between transition-all duration-300">
           <div>
-            <div class="flex items-center gap-3 mb-6">
+            <div class="flex items-center gap-3 mb-3 sm:mb-6">
               <div
-                class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg shrink-0">
+                class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-base sm:text-lg shrink-0">
                 <i class="fa-solid fa-database"></i>
               </div>
-              <h3 class="font-heading font-bold text-white text-base">
+              <h3 class="font-heading font-bold text-white text-xs sm:text-base">
                 Database &amp; Data Core
               </h3>
             </div>
 
-            <div class="space-y-3">
+            <div class="space-y-2 sm:space-y-3">
               <div
-                class="flex items-center gap-3 p-3 rounded-2xl bg-slate-900/60 border border-white/5 hover:border-purple-500/30 transition-all duration-300">
+                class="flex items-center gap-2.5 sm:gap-3 p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-slate-900/60 border border-white/5 hover:border-purple-500/30 transition-all duration-300">
                 <div
-                  class="w-8 h-8 rounded-lg bg-pink-500/15 flex items-center justify-center text-pink-400 shrink-0 text-sm">
+                  class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-pink-500/15 flex items-center justify-center text-pink-400 shrink-0 text-xs sm:text-sm">
                   <i class="fa-solid fa-code"></i>
                 </div>
                 <div class="overflow-hidden">
                   <div class="text-xs font-semibold text-white">SQL (MySQL &amp; PostgreSQL)</div>
-                  <div class="text-[10px] text-gray-400 font-mono mt-0.5 truncate">CTEs, Windows, Indexes</div>
+                  <div class="text-[9px] sm:text-[10px] text-gray-400 font-mono mt-0.5 truncate">CTEs, Windows, Indexes
+                  </div>
                 </div>
               </div>
 
@@ -2060,37 +2096,38 @@
 
 
   <!-- CERTIFICATES SECTION -->
-  <section id="certificates" class="py-12 sm:py-24 relative z-10 bg-slate-950/50 border-y border-white/5">
+  <section id="certificates" class="py-8 sm:py-24 relative z-10 bg-slate-950/50 border-y border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-2">
+      <div class="text-center max-w-3xl mx-auto mb-5 sm:mb-16">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-1.5 sm:mb-2">
           Credentials
         </h2>
-        <p class="font-heading text-3xl sm:text-4xl font-bold text-white">
+        <p class="font-heading text-2xl sm:text-4xl font-bold text-white">
           Certifications & Verification
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
         <!-- 1. Data Analytics with Gen AI Certificate -->
         <div
-          class="glass-panel p-6 rounded-3xl border border-cyan-500/30 glass-panel-hover flex flex-col justify-between">
+          class="glass-panel p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl border border-cyan-500/30 glass-panel-hover flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center justify-between mb-2.5 sm:mb-4">
               <span
-                class="text-[10px] font-mono px-2.5 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                class="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
                 Verified
               </span>
-              <i class="fa-solid fa-award text-cyan-400 text-xl"></i>
+              <i class="fa-solid fa-award text-cyan-400 text-base sm:text-xl"></i>
             </div>
-            <h3 class="font-heading font-bold text-white text-base mb-2">
+            <h3 class="font-heading font-bold text-white text-xs sm:text-base mb-1 sm:mb-2">
               Data Analytics with Gen AI
             </h3>
-            <p class="text-xs text-gray-400">
+            <p class="text-[11px] sm:text-xs text-gray-400">
               Besant Technologies — Hands-on Course covering Data Analytics, SQL, Python, Power BI, and Generative AI.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
+          <div
+            class="mt-3.5 sm:mt-6 pt-2.5 sm:pt-4 border-t border-white/10 flex items-center justify-between text-[10px] sm:text-xs text-gray-400">
             <span>Besant Technologies</span>
             <a href="https://drive.google.com/file/d/1ImnZlHqx_g4cSw3J7tzo69W88qXajTlW/view?usp=drivesdk"
               target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white underline">
@@ -2101,24 +2138,26 @@
         </div>
 
         <!-- 2. Krish Naik Bootcamp -->
-        <div class="glass-panel p-6 rounded-3xl border border-white/10 glass-panel-hover flex flex-col justify-between">
+        <div
+          class="glass-panel p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 glass-panel-hover flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center justify-between mb-2.5 sm:mb-4">
               <span
-                class="text-[10px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                class="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
                 Verified
               </span>
-              <i class="fa-solid fa-graduation-cap text-purple-400 text-xl"></i>
+              <i class="fa-solid fa-graduation-cap text-purple-400 text-base sm:text-xl"></i>
             </div>
-            <h3 class="font-heading font-bold text-white text-base mb-2">
+            <h3 class="font-heading font-bold text-white text-xs sm:text-base mb-1 sm:mb-2">
               Complete Data Analyst Bootcamp
             </h3>
-            <p class="text-xs text-gray-400">
+            <p class="text-[11px] sm:text-xs text-gray-400">
               Krish Naik - Comprehensive End-to-End Analytics, SQL, Python, &
               Power BI.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
+          <div
+            class="mt-3.5 sm:mt-6 pt-2.5 sm:pt-4 border-t border-white/10 flex items-center justify-between text-[10px] sm:text-xs text-gray-400">
             <span>Complete Course</span>
             <a href="https://www.udemy.com/certificate/UC-8b60daf5-af30-4e10-83f5-1724a8ec8f2c/" target="_blank"
               rel="noopener noreferrer" class="text-purple-300 hover:text-white underline">
@@ -2129,25 +2168,27 @@
         </div>
 
         <!-- 3. HackerRank SQL Advanced & Python -->
-        <div class="glass-panel p-6 rounded-3xl border border-white/10 glass-panel-hover flex flex-col justify-between">
+        <div
+          class="glass-panel p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 glass-panel-hover flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center justify-between mb-2.5 sm:mb-4">
               <span
-                class="text-[10px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                class="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
                 Verified
               </span>
 
-              <i class="fa-solid fa-code text-green-400 text-xl"></i>
+              <i class="fa-solid fa-code text-green-400 text-base sm:text-xl"></i>
             </div>
-            <h3 class="font-heading font-bold text-white text-base mb-2">
+            <h3 class="font-heading font-bold text-white text-xs sm:text-base mb-1 sm:mb-2">
               HackerRank SQL (Advanced) & Python
             </h3>
-            <p class="text-xs text-gray-400">
+            <p class="text-[11px] sm:text-xs text-gray-400">
               Certified proficiency in advanced SQL query optimization and
               Python data manipulation.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
+          <div
+            class="mt-3.5 sm:mt-6 pt-2.5 sm:pt-4 border-t border-white/10 flex items-center justify-between text-[10px] sm:text-xs text-gray-400">
             <span>HackerRank</span>
             <a href="https://www.hackerrank.com/certificates/74230947bbe7" target="_blank" rel="noopener noreferrer"
               class="text-purple-300 hover:text-white underline">
@@ -2158,24 +2199,26 @@
         </div>
 
         <!-- 4. Excel Beginner to Advanced -->
-        <div class="glass-panel p-6 rounded-3xl border border-white/10 glass-panel-hover flex flex-col justify-between">
+        <div
+          class="glass-panel p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 glass-panel-hover flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center justify-between mb-2.5 sm:mb-4">
               <span
-                class="text-[10px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                class="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
                 Verified
               </span>
-              <i class="fa-solid fa-file-excel text-emerald-400 text-xl"></i>
+              <i class="fa-solid fa-file-excel text-emerald-400 text-base sm:text-xl"></i>
             </div>
-            <h3 class="font-heading font-bold text-white text-base mb-2">
+            <h3 class="font-heading font-bold text-white text-xs sm:text-base mb-1 sm:mb-2">
               Microsoft Excel: Beginner to Advanced
             </h3>
-            <p class="text-xs text-gray-400">
+            <p class="text-[11px] sm:text-xs text-gray-400">
               Kyle Pew - Advanced formulas, Power Query ETL, Pivot Tables, and
               MIS automation.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
+          <div
+            class="mt-3.5 sm:mt-6 pt-2.5 sm:pt-4 border-t border-white/10 flex items-center justify-between text-[10px] sm:text-xs text-gray-400">
             <span>Udemy Certified</span>
             <a href="https://www.udemy.com/certificate/UC-f0561ccd-ad41-43f5-bb2e-07d703d9923a/" target="_blank"
               rel="noopener noreferrer" class="text-purple-300 hover:text-white underline">
@@ -2189,7 +2232,7 @@
   </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="py-16 sm:py-20 relative z-10 overflow-hidden">
+  <section id="contact" class="py-8 sm:py-20 relative z-10 overflow-hidden">
     <!-- Background Ambient Glow Blobs -->
     <div
       class="absolute top-1/2 left-1/4 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl pointer-events-none -translate-y-1/2 animate-pulse-glow">
@@ -2200,86 +2243,89 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Centered Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-10">
+      <div class="text-center max-w-3xl mx-auto mb-5 sm:mb-10">
         <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs font-mono text-purple-300 mb-3">
+          class="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-[10px] sm:text-xs font-mono text-purple-300 mb-2 sm:mb-3">
           <i class="fa-solid fa-paper-plane text-purple-400"></i>
           <span>RECRUITER CONTACT</span>
         </div>
-        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">
+        <h2 class="font-heading text-2xl sm:text-4xl font-bold text-white tracking-tight mb-2 sm:mb-3">
           Hiring a Data Analyst? <span
             class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400">Let's
             Talk.</span>
         </h2>
-        <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        <p class="text-gray-400 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed">
           Available for full-time opportunities as a <strong class="text-white">Data Analyst</strong> or <strong
             class="text-white">Business Intelligence Analyst</strong>. Based in Bangalore and open to remote
           opportunities.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+      <div class="grid lg:grid-cols-12 gap-4 sm:gap-8 items-stretch">
         <!-- Left Column: Direct Contact & Social Links Card -->
         <div
-          class="lg:col-span-5 glass-panel p-5 sm:p-6 rounded-3xl border border-white/10 flex flex-col justify-between shadow-2xl relative overflow-hidden hover:border-purple-500/30 transition-all duration-300">
+          class="lg:col-span-5 glass-panel p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 flex flex-col justify-between shadow-2xl relative overflow-hidden hover:border-purple-500/30 transition-all duration-300">
           <div>
-            <p class="text-xs font-mono uppercase tracking-wider text-purple-400 mb-4 flex items-center gap-2">
+            <p
+              class="text-xs font-mono uppercase tracking-wider text-purple-400 mb-2.5 sm:mb-4 flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
               Direct Channels
             </p>
 
-            <div class="space-y-2.5">
+            <div class="space-y-2 sm:space-y-2.5">
               <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tusharmore1302@gmail.com" target="_blank"
                 rel="noopener noreferrer" onclick="return handleEmailClick(event);"
-                class="p-3 sm:p-3.5 rounded-2xl bg-slate-900/60 border border-white/5 flex items-center gap-3.5 hover:border-purple-500/40 hover:bg-slate-900/90 transition-all group">
+                class="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-slate-900/60 border border-white/5 flex items-center gap-3 hover:border-purple-500/40 hover:bg-slate-900/90 transition-all group">
                 <div
-                  class="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-base group-hover:scale-110 transition-transform shrink-0">
+                  class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-xs sm:text-base group-hover:scale-110 transition-transform shrink-0">
                   <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div class="overflow-hidden">
-                  <span class="text-[11px] text-gray-400 block leading-tight">Direct Email</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400 block leading-tight">Direct Email</span>
                   <span
-                    class="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors truncate block">tusharmore1302@gmail.com</span>
+                    class="text-xs sm:text-sm font-semibold text-white group-hover:text-purple-300 transition-colors truncate block">tusharmore1302@gmail.com</span>
                 </div>
               </a>
 
               <a href="tel:+919518344151"
-                class="p-3 sm:p-3.5 rounded-2xl bg-slate-900/60 border border-white/5 flex items-center gap-3.5 hover:border-blue-500/40 hover:bg-slate-900/90 transition-all group">
+                class="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-slate-900/60 border border-white/5 flex items-center gap-3 hover:border-blue-500/40 hover:bg-slate-900/90 transition-all group">
                 <div
-                  class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-base group-hover:scale-110 transition-transform shrink-0">
+                  class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-xs sm:text-base group-hover:scale-110 transition-transform shrink-0">
                   <i class="fa-solid fa-phone"></i>
                 </div>
                 <div>
-                  <span class="text-[11px] text-gray-400 block leading-tight">Phone Number</span>
-                  <span class="text-sm font-semibold text-white group-hover:text-blue-300 transition-colors">+91
+                  <span class="text-[10px] sm:text-[11px] text-gray-400 block leading-tight">Phone Number</span>
+                  <span
+                    class="text-xs sm:text-sm font-semibold text-white group-hover:text-blue-300 transition-colors">+91
                     9518344151</span>
                 </div>
               </a>
 
               <a href="https://wa.me/919518344151?text=Hi%20Tushar%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect."
                 target="_blank" rel="noopener noreferrer" aria-label="Message Tushar on WhatsApp"
-                class="p-3 sm:p-3.5 rounded-2xl bg-slate-900/60 border border-white/5 flex items-center gap-3.5 hover:border-emerald-500/40 hover:bg-slate-900/90 transition-all group">
+                class="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-slate-900/60 border border-white/5 flex items-center gap-3 hover:border-emerald-500/40 hover:bg-slate-900/90 transition-all group">
                 <div
-                  class="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-lg group-hover:scale-110 transition-transform shrink-0">
+                  class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-sm sm:text-lg group-hover:scale-110 transition-transform shrink-0">
                   <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <div>
-                  <span class="text-[11px] text-gray-400 block leading-tight">WhatsApp</span>
-                  <span class="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors">Message
+                  <span class="text-[10px] sm:text-[11px] text-gray-400 block leading-tight">WhatsApp</span>
+                  <span
+                    class="text-xs sm:text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors">Message
                     me directly</span>
                 </div>
               </a>
 
               <a href="https://www.google.com/maps/search/?api=1&query=Electronic+City+Phase+2,+Bengaluru,+Karnataka"
                 target="_blank" rel="noopener noreferrer" aria-label="Open Tushar's Bangalore location in Google Maps"
-                class="p-3 sm:p-3.5 rounded-2xl bg-slate-900/60 border border-white/5 flex items-center gap-3.5 hover:border-cyan-500/40 hover:bg-slate-900/90 transition-all group">
+                class="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-slate-900/60 border border-white/5 flex items-center gap-3 hover:border-cyan-500/40 hover:bg-slate-900/90 transition-all group">
                 <div
-                  class="w-10 h-10 rounded-xl bg-cyan-600/20 text-cyan-400 flex items-center justify-center text-base group-hover:scale-110 transition-transform shrink-0">
+                  class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-cyan-600/20 text-cyan-400 flex items-center justify-center text-xs sm:text-base group-hover:scale-110 transition-transform shrink-0">
                   <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <div>
-                  <span class="text-[11px] text-gray-400 block leading-tight">Location</span>
-                  <span class="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                  <span class="text-[10px] sm:text-[11px] text-gray-400 block leading-tight">Location</span>
+                  <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors">
                     Bangalore, Karnataka
                   </span>
                 </div>
@@ -2317,48 +2363,49 @@
 
         <!-- Right Column: Send Message Form Card -->
         <div
-          class="lg:col-span-7 glass-panel p-5 sm:p-6 rounded-3xl border border-white/10 shadow-2xl relative flex flex-col justify-between hover:border-purple-500/30 transition-all duration-300">
+          class="lg:col-span-7 glass-panel p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 shadow-2xl relative flex flex-col justify-between hover:border-purple-500/30 transition-all duration-300">
           <div>
-            <p class="text-xs font-mono uppercase tracking-wider text-purple-400 mb-4 flex items-center gap-2">
+            <p class="text-xs font-mono uppercase tracking-wider text-purple-400 mb-3 sm:mb-4 flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
               Send a Message
             </p>
 
-            <form action="https://formsubmit.co/tusharmore1302@gmail.com" method="POST" class="space-y-3.5">
+            <form action="https://formsubmit.co/tusharmore1302@gmail.com" method="POST"
+              class="space-y-2.5 sm:space-y-3.5">
               <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next"
                 value="https://tushargithub0103.github.io/MyDataAnalystPortfolio/#contact" />
 
-              <div class="grid sm:grid-cols-2 gap-4">
+              <div class="grid sm:grid-cols-2 gap-2.5 sm:gap-4">
                 <div>
-                  <label class="block text-[11px] font-mono text-gray-300 mb-1.5">NAME *</label>
+                  <label class="block text-[10px] sm:text-[11px] font-mono text-gray-300 mb-1">NAME *</label>
                   <input type="text" name="name" required placeholder="Your name"
-                    class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/50 transition-all text-sm" />
+                    class="w-full px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/50 transition-all text-xs sm:text-sm" />
                 </div>
 
                 <div>
-                  <label class="block text-[11px] font-mono text-gray-300 mb-1.5">EMAIL ADDRESS *</label>
+                  <label class="block text-[10px] sm:text-[11px] font-mono text-gray-300 mb-1">EMAIL ADDRESS *</label>
                   <input type="email" name="email" required placeholder="e.g. you@domain.com"
-                    class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/50 transition-all text-sm" />
+                    class="w-full px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/50 transition-all text-xs sm:text-sm" />
                 </div>
               </div>
 
               <div>
-                <label class="block text-[11px] font-mono text-gray-300 mb-1.5">SUBJECT</label>
+                <label class="block text-[10px] sm:text-[11px] font-mono text-gray-300 mb-1">SUBJECT</label>
                 <input type="text" name="subject" placeholder="What's it about?"
-                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/50 transition-all text-sm" />
+                  class="w-full px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/50 transition-all text-xs sm:text-sm" />
               </div>
 
               <div>
-                <label class="block text-[11px] font-mono text-gray-300 mb-1.5">MESSAGE *</label>
+                <label class="block text-[10px] sm:text-[11px] font-mono text-gray-300 mb-1">MESSAGE *</label>
                 <textarea name="message" required rows="3"
                   placeholder="Tell me about your project, job opportunity, or collaboration."
-                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/50 transition-all text-sm resize-none"></textarea>
+                  class="w-full px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500/50 transition-all text-xs sm:text-sm resize-none"></textarea>
               </div>
 
               <button type="submit"
-                class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 hover:from-purple-500 hover:via-blue-500 hover:to-cyan-500 text-white font-semibold text-sm shadow-glow transition-all flex items-center justify-center gap-2 group mt-2">
+                class="w-full py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 hover:from-purple-500 hover:via-blue-500 hover:to-cyan-500 text-white font-semibold text-xs sm:text-sm shadow-glow transition-all flex items-center justify-center gap-2 group mt-2">
                 <i
                   class="fa-regular fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
                 Send Message
