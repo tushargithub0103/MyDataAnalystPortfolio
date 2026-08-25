@@ -1037,7 +1037,7 @@
               </div>
             </div>
             <p class="text-[11px] sm:text-xs text-gray-400 leading-relaxed">
-              Laid the programming foundations in C/Java, Database Management Systems (SQL), and web design principles.
+              Laid the programming foundations in Database Management Systems (SQL), and Web Design Principles.
             </p>
           </div>
 
@@ -1226,23 +1226,23 @@
                   </div>
                   <pre
                     class="text-gray-200 overflow-x-auto max-h-56 text-[11px] leading-relaxed p-2 rounded bg-slate-900 border border-white/5 font-mono"><code>WITH CancellationSummary AS (
-                        SELECT 
-                            Booking_ID,
-                            Vehicle_Type,
-                            Booking_Status,
-                            Canceled_Rides_by_Driver,
-                            Booking_Value
-                        FROM ola_bookings
-                    )
-                    SELECT 
-                        Vehicle_Type,
-                        COUNT(Booking_ID) AS Total_Rides,
-                        SUM(CASE WHEN Booking_Status = 'Success' THEN 1 ELSE 0 END) AS Completed_Rides,
-                        SUM(CASE WHEN Canceled_Rides_by_Driver = 'Personal & Car related issue' THEN 1 ELSE 0 END) AS Driver_Personal_Cancels,
-                        ROUND(SUM(CASE WHEN Booking_Status = 'Canceled by Driver' THEN Booking_Value ELSE 0 END), 2) AS Lost_Revenue_INR
-                    FROM CancellationSummary
-                    GROUP BY Vehicle_Type
-                    ORDER BY Lost_Revenue_INR DESC;</code></pre>
+        SELECT 
+        Booking_ID,
+        Vehicle_Type,
+        Booking_Status,
+        Canceled_Rides_by_Driver,
+        Booking_Value
+    FROM ola_bookings
+)
+SELECT 
+    Vehicle_Type,
+    COUNT(Booking_ID) AS Total_Rides,
+    SUM(CASE WHEN Booking_Status = 'Success' THEN 1 ELSE 0 END) AS Completed_Rides,
+    SUM(CASE WHEN Canceled_Rides_by_Driver = 'Personal & Car related issue' THEN 1 ELSE 0 END) AS Driver_Personal_Cancels,
+    ROUND(SUM(CASE WHEN Booking_Status = 'Canceled by Driver' THEN Booking_Value ELSE 0 END), 2) AS Lost_Revenue_INR
+FROM CancellationSummary
+GROUP BY Vehicle_Type
+ORDER BY Lost_Revenue_INR DESC;</code></pre>
                   <div
                     class="p-2.5 rounded-xl bg-purple-900/20 border border-purple-500/20 text-gray-300 text-[11px] leading-normal font-sans">
                     <strong class="text-purple-300 font-mono block mb-0.5">What it does & Why it matters:</strong>
@@ -1330,14 +1330,14 @@
                 </div>
                 <pre
                   class="text-gray-200 overflow-x-auto max-h-56 text-[11px] leading-relaxed p-2 rounded bg-slate-900 border border-white/5 font-mono"><code>Repeat_Customer_Revenue_PCT = 
-                    VAR TotalRevenue = SUM(CustomerShopping[Purchase Amount (USD)])
-                    VAR RepeatCustomerRevenue = 
-                        CALCULATE(
-                            SUM(CustomerShopping[Purchase Amount (USD)]),
-                            CustomerShopping[Previous Purchases] > 5
-                        )
-                    RETURN 
-                        DIVIDE(RepeatCustomerRevenue, TotalRevenue, 0)</code></pre>
+VAR TotalRevenue = SUM(CustomerShopping[Purchase Amount (USD)])
+VAR RepeatCustomerRevenue = 
+    CALCULATE(
+        SUM(CustomerShopping[Purchase Amount (USD)]),
+        CustomerShopping[Previous Purchases] > 5
+    )
+RETURN 
+    DIVIDE(RepeatCustomerRevenue, TotalRevenue, 0)</code></pre>
                 <div
                   class="p-2.5 rounded-xl bg-cyan-900/20 border border-cyan-500/20 text-gray-300 text-[11px] leading-normal font-sans">
                   <strong class="text-cyan-300 font-mono block mb-0.5">What it does & Why it matters:</strong>
